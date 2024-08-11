@@ -35,7 +35,39 @@ Additional features I wish for the website are to be user complimentary features
 - For the homepage to load notes at an acceptable speed
 
 ### Design
+
 #### Colour Choices
+
+I wish to mimic the appearence of paper notes, like the lined paper in a note book or a shopping list, and as such I have decided to go for a white background, light grey accents/borders, and pale/soft colours. Then further borrowing the aesthetics from sticky notes, I came to the decision that my colours could be green, yellow, blue, or pink, the most common and famous colours of sticky notes, and ultimately decided I will go with a pale yellow.
+
+I decided to choose yellow due to two reasons:
+
+1. Colour theory explains the colour yellow is assossiated with happyness, with pleasent positive emotions
+2. The same yellow can be used as for the high-lighter if I can add the additional goal of css styling being saved to the database, create a constant colour pallete across the webpage
+
+With my choices of white, grey, and pale yellow chosen, I have decided to dedicate these colours to:
+
+##### White
+- The background of all pages
+- The background of the notes
+- The background of buttons
+- The background of the header
+- The text colour of buttons on click/mousedown
+- Footer text colour
+
+##### Grey
+- Borders on divs
+- The border of buttons
+- The background of buttons on click/mousedown
+- Border of notes on the homepage
+
+##### Yellow
+- The background of flash messages
+- The background of the footer
+- The background of buttons in navigation
+
+Text will remain generic black unless specified elsewhere.
+
 #### Layout Of The Website And Pages
 #### Wireframe
 
