@@ -18,15 +18,21 @@ Additional features I wish for the website are to be user complimentary features
 
 #### First Time User
 
-- To be able to quickly navigate the layout of the website
+- To be able to quickly and easily navigate the layout of the website
 - To be able to create a new note in three clicks or less
 - To be able to create a note and save it to the database
 
 #### Returning User
 
 - To be able to load already created notes
+- To be able to edit old notes and have those changes replace the old document
+- To be able to delete a note in four clicks while still having protective measures
 
 #### Dedicated User
+
+- To be able to search through multiple notes on the homapage with ease by making notes titles clear, easy to read, and possibly with a search bar
+- For notes to load quickly even at larger sizes
+- For the homepage to load notes at an acceptable speed
 
 ### Design
 #### Colour Choices
