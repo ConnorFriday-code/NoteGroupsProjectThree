@@ -68,8 +68,17 @@ With my choices of white, grey, and pale yellow chosen, I have decided to dedica
 
 Text will remain generic black unless specified elsewhere.
 
-#### Layout Of The Website And Pages
-#### Wireframe
+#### Wireframes and logic
+
+##### Template
+
+##### Home
+
+##### Create Link
+
+##### Note
+
+##### 404 Page
 
 ## Final Features/Product
 
