@@ -70,15 +70,11 @@ Text will remain generic black unless specified elsewhere.
 
 #### Wireframes and logic
 
-##### Template
+##### Wireframe
 
-##### Home
+![Image of all wireframes and colours used](readme_folder/wireframe_and_database/wireframes_project_3.png)
 
-##### Create Link
-
-##### Note
-
-##### 404 Page
+##### Databse Logic
 
 ## Final Features/Product
 
