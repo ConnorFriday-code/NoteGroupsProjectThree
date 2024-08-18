@@ -76,6 +76,11 @@ Text will remain generic black unless specified elsewhere.
 
 ##### Databse Logic
 
+
+|id|title|description|note_content|date_updated
+|:---|:---|:---|:---|:---
+|
+
 ## Final Features/Product
 
 ### Deployment
