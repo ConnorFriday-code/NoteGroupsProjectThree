@@ -70,16 +70,31 @@ Text will remain generic black unless specified elsewhere.
 
 #### Wireframes and logic
 
-##### Wireframe
+#### Wireframe
 
 ![Image of all wireframes and colours used](readme_folder/wireframe_and_database/wireframes_project_3.png)
 
-##### Databse Logic
+#### Databse Logic
 
+Down below is the planned database columns and their data storage types.
 
-|id|title|description|note_content|date_updated
-|:---|:---|:---|:---|:---
-|
+|Data column|Data type
+|:---|:---|
+|id|Int
+|title|Str
+|description|Str
+|note_content|Txt
+|date_updated|Date
+
+'id' Will be the primary key and will increment with every new note created/enters the entry.
+<br>
+'title' Will be a string to be displayed on the home page and at the top of a note.
+<br>
+'description' Is an optional field and will be displayed on the home page.
+<br>
+'note_content' Will be the content of the note. I plan to save it as an html with user being able to 'edit' the html with a rich text editor.
+<br>
+'date_updated' Will contain the date whenever the file is updated for sorting on the homepage.
 
 ## Final Features/Product
 
@@ -87,6 +102,8 @@ Text will remain generic black unless specified elsewhere.
 
 #### GitHub
 #### Heroku And The Database
+
+#### Creating the database
 
 ### Features
 

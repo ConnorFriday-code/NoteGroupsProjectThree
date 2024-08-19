@@ -9,4 +9,4 @@ class Note(db.Model):
     date_updated = db.Column(db.DateTime, nullable=False, default=db.func.now(), onupdate=db.func.now())
 
     def __repr__(self):
-        return self
+        return f"Note{self.id} - {self.title} - {self.description}"
