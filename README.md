@@ -105,6 +105,30 @@ Down below is the planned database columns and their data storage types.
 
 #### Creating the database
 
+The first step was installing Flask, SQLAlchemy, and psycop using the following command line in the terminal:
+
+pip3 install 'Flask-SQLAlchemy<3' psycopg2 sqlalchemy==1.4.46
+
+Afterwards, I had to update Flask to a later model due to avoid hitting an error later, as advice by a college in one of meetings with our tutor. The command line used in the terminal was as follows:
+
+pip3 install --upgrade --user Flask==2.3.3
+
+With the sytems in place, I quickly built the initial required pages for a website (such as run.py, home.html etc.) before creating models.py. This is to contain the database schema for all the notes. This is what the created code looks like below:
+
+![Img of models.py code](<readme_folder/creating_database/new database_1.png>)
+
+Afterwards, I proceded to update my routes.py to import 'Notes' from the above module for future use.
+
+![Img of routes.py updated with Notes import](<readme_folder/creating_database/new database_2.png>)
+
+I followed this up by then connecting to sql and creating the databse in the terminal.
+
+![Creating database in postgresql in the terminal](<readme_folder/creating_database/new database_3.png>)
+
+I then used the python interpetor in the terminal to make the postgres database populated with the table from models.py.
+
+![Python in terminal to add table to the database](<readme_folder/creating_database/new database_4.png>)
+
 ### Features
 
 #### 404 Page
