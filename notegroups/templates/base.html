@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="A simple website to contain all your notes!">
+	<meta name="keywords" content="note, writing">
+    <title>Note Groups!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
 </head>
 <body>
-    <p>hello world!</p>
+    <!-- Entire header section containg the logo and nav -->
+    <header class="bg-white grey-border">
+        <!-- Logo -->
+        <div id="logo-div">
+            <p>place holder</p>
+        </div>
+        <!-- Navigation with two links -->
+        <nav id="nav-large">
+            <div id="home-button" class="bg-yellow nav-button">
+                <a href="#" class="align-centre">Home</a>
+            </div>
+            <div id="new-note-button" class="bg-yellow nav-button">
+                <a href="#" class="align-centre">New Note</a>
+            </div>
+        </nav>
+
+        <nav id="nav-small">
+            <div id="menu-button" class="bg-yellow nav-button">
+                <p class="align-centre">Menu</p>
+            </div>
+        </nav>
+    </header>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
