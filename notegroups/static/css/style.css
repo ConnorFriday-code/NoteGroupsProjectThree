@@ -71,7 +71,33 @@ header{
     line-height: 240%;
 }
 
+/*------------------------------------------------------------ Content styling*/
+
+#page-content{
+    height: 80vh;
+}
+
 /*------------------------------------------------------------ Footer*/
+
+footer{
+    display: flex;
+    padding: 10px;
+}
+
+footer div{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+#social-list{
+    list-style-type: none;
+}
+
+#social-list ul{
+    text-decoration: none;
+    padding: 0;
+}
 
 /*------------------------------------------------------------ Medium/tablet edits*/
 
@@ -104,5 +130,21 @@ header{
         height: 100%;
         font-size: 32px;
         line-height: 240%;
+    }
+
+    /*------------------------------------------------------------ Footer*/
+
+    footer{
+        display: flex;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    footer div{
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
 }
