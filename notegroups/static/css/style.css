@@ -10,6 +10,12 @@ p{
     padding: 0;
 }
 
+.title-font{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
 /*------------------------------------------------------------ Style*/
 
 .bg-white{
@@ -26,6 +32,7 @@ p{
 
 .grey-border{
     border: #a8a8a8 2px solid;
+    border-radius: 3px;
 }
 
 .align-centre{
@@ -130,6 +137,33 @@ footer div{
         height: 100%;
         font-size: 32px;
         line-height: 240%;
+    }
+
+    #menu-button ul,
+    #menu-button li,  
+    #menu-button a {
+        z-index: 1;
+        list-style-type: none;
+        text-decoration: none;
+        padding: 0px;
+        width:100%;
+        line-height: 80px;
+        position: relative;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 32px;
+        color: #000;
+        margin: 0 0 0 -0.75px;
+    }
+
+    #menu-button a{
+        display: block;
+    }
+
+    #dropdown-list{
+        list-style-type: none;
+        text-decoration: none;
+        display: none;
     }
 
     /*------------------------------------------------------------ Footer*/

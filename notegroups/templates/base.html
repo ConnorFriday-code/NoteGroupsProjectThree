@@ -6,6 +6,11 @@
     <meta name="description" content="A simple website to contain all your notes!">
 	<meta name="keywords" content="note, writing">
     <title>Note Groups!</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
 </head>
 <body>
@@ -18,16 +23,20 @@
         <!-- Navigation with two links -->
         <nav id="nav-large">
             <div id="home-button" class="bg-yellow nav-button">
-                <a href="#" class="align-centre">Home</a>
+                <a href="{{ url_for('home') }}" class="align-centre title-font">Home</a>
             </div>
             <div id="new-note-button" class="bg-yellow nav-button">
-                <a href="#" class="align-centre">New Note</a>
+                <a href="#" class="align-centre title-font">New Note</a>
             </div>
         </nav>
 
         <nav id="nav-small">
             <div id="menu-button" class="bg-yellow nav-button">
-                <p class="align-centre">Menu</p>
+                <p class="align-centre title-font">Menu</p>
+                <ul id="dropdown-list" class="align-centre small-dropdown-hidden">
+                    <li><a href="{{ url_for('home') }}" class="title-font bg-yellow grey-border">Home</a></li>
+                    <li><a href="#" class="title-font bg-yellow grey-border">New Note</a></li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -41,15 +50,16 @@
             <p>Code and logo belong to the owner of the NoteGroups!&copy;</p>
         </div>
         <div id="social-media">
-            <li id="social-list">
+            <ul id="social-list">
                 <p>Please! Feel free to check out our social media:</p>
-                <ul><a href="https://twitter.com/" target="_blank" aria-label="">Twitter</a></ul>
-                <ul><a href="https://en-gb.facebook.com/" target="_blank" aria-label="">Facebook</a></ul>
-                <ul><a href="https://www.instagram.com/" target="_blank" aria-label="">Instagram</a></ul>
-            </li>
+                <li><a href="https://twitter.com/" target="_blank" aria-label="">Twitter</a></li>
+                <li><a href="https://en-gb.facebook.com/" target="_blank" aria-label="">Facebook</a></li>
+                <li><a href="https://www.instagram.com/" target="_blank" aria-label="">Instagram</a></li>
+            </ul>
         </div>
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
