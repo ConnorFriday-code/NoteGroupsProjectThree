@@ -26,7 +26,7 @@
                 <a href="{{ url_for('home') }}" class="align-centre title-font">Home</a>
             </div>
             <div id="new-note-button" class="bg-yellow nav-button">
-                <a href="#" class="align-centre title-font">New Note</a>
+                <a href="{{ url_for('new_note') }}" class="align-centre title-font">New Note</a>
             </div>
         </nav>
 
@@ -35,14 +35,15 @@
                 <p class="align-centre title-font">Menu</p>
                 <ul id="dropdown-list" class="align-centre small-dropdown-hidden">
                     <li><a href="{{ url_for('home') }}" class="title-font bg-yellow grey-border">Home</a></li>
-                    <li><a href="#" class="title-font bg-yellow grey-border">New Note</a></li>
+                    <li><a href="{{ url_for('new_note') }}" class="title-font bg-yellow grey-border">New Note</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <div id="page-content" class="bg-grey">
-
+        {% block content %}
+        {% endblock %}
     </div>
 
     <footer class="bg-yellow grey-border align-centre">

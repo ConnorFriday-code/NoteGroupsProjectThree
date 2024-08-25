@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method="POST" action="{{ url_for('new_note') }}">
+    <!-- Note title input box (required) -->
+    <div>
+        <input id="title" name="title" type="text" minlength="3" maxlength="50" required>
+        <label for="title">Title</label>
+    </div>
+    <!-- Note decription input text area -->
+    <div>
+        <textarea id="description" name="description" type="text" maxlength="200"></textarea>
+        <label for="description">Description</label>
+    </div>
+    <!-- Buttons -->
+     <div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+        <div>
+            <button>Cancel</button>
+        </div>
+     </div>
+</form>
+
+{% endblock %}
