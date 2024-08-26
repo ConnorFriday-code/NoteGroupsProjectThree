@@ -1,29 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
 
-<form method="POST" action="{{ url_for('new_note') }}">
-    <!-- Note title input box (required) -->
-    <div>
-        <label for="title">Title</label>
-        <input id="title" name="title" type="text" minlength="3" maxlength="50" required>
-    </div>
-    <!-- Note decription input text area -->
-    <div>
-        <label for="description">Description</label>
-        <textarea id="description" name="description" type="text" maxlength="200"></textarea>
-    </div>
-    <!-- Creating a blank file for the 'content' part of the databse -->
-    <input type="hidden" name="note_content" id="note_content">
-    <!-- Buttons -->
-     <div>
-        <div>
-            <button type="submit">Submit</button>
+<div id="new-note-block" class="grey-border">
+    <form method="POST" action="{{ url_for('new_note') }}">
+        <!-- Note title input box (required) -->
+        <div id="title-div">
+            <label for="title">Title:</label>
+            <input id="title" name="title" type="text" minlength="3" maxlength="150" required>
         </div>
+        <!-- Note decription input text area -->
         <div>
-            <button>Cancel</button>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" type="text" maxlength="1000" rows="10"></textarea>
         </div>
-     </div>
-</form>
+        <!-- Creating a blank file for the 'content' part of the databse -->
+        <input type="hidden" name="note_content" id="note_content">
+        <!-- Buttons -->
+        <div class="button-container">
+            <button type="submit" id="submit-button">Submit</button>
+            <button id="cancel-button">Cancel</button>
+        </div>
+    </form>
+</div>
 
 {% endblock %}
 
