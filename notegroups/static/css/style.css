@@ -32,7 +32,7 @@ p{
 }
 
 .grey-border{
-    border: #dadada 1px solid;
+    border: #dadada 2px solid;
     border-radius: 5px;
 }
 
@@ -98,30 +98,57 @@ header{
 
 /*------------------------------------------------------------ Home*/
 
-#note-list{
+.note-list{
     display: flex;
     flex-wrap: wrap;
     margin: 40px;
 }
 
-
-#note-card{
+.note-card{
     width: 30%;
     margin: 10px auto;
 }
 
-#card-content{
+.card-content{
     padding: 5px;
+    height: 100%;
 }
 
-#card-title{
+.card-title{
     border-bottom: #dadada 1px solid;
     border-radius: 3px;
 }
 
-#card-title, #card-description{
+.card-title, .card-description{
     word-wrap: break-word;
 }
+
+.top-card-buttons{
+    width: 50%;
+    float: left;
+}
+
+.open-button, .edit-button, .delete-button{
+    width: 60px;
+    height: 30px;
+    border: #dadada 1px solid;
+    border-radius: 5px;
+    display: block;
+    line-height: 25px;
+    margin: auto;
+    font-weight: 900;
+    color: #000;
+}
+
+.edit-button, .open-button{
+    background-color: #fff;
+}
+
+
+.delete-button{
+    background-color: #ff2c2c;
+}
+
 
 /*------------------------------------------------------------ New Note*/
 
