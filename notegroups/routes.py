@@ -5,7 +5,8 @@ from datetime import datetime
 
 @app.route("/")
 def home():
-    return render_template("home.html")
+    notes=list(Note.query.order_by(Note.date_updated.desc()).all())
+    return render_template("home.html", notes=notes)
 
 @app.route("/note")
 def note():

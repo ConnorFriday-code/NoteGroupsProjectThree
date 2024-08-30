@@ -96,6 +96,33 @@ header{
     margin: 20px auto;
 }
 
+/*------------------------------------------------------------ Home*/
+
+#note-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px;
+}
+
+
+#note-card{
+    width: 30%;
+    margin: 10px auto;
+}
+
+#card-content{
+    padding: 5px;
+}
+
+#card-title{
+    border-bottom: #dadada 1px solid;
+    border-radius: 3px;
+}
+
+#card-title, #card-description{
+    word-wrap: break-word;
+}
+
 /*------------------------------------------------------------ New Note*/
 
 #new-note-block{

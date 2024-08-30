@@ -1,8 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3>Testing</h3>
-
-<a href="{{ url_for('note') }}" class="title-font bg-yellow grey-border">Note</a>
+<div id="note-list">
+    {% for note in notes %}
+    <div id="note-card">
+        <div id="card-content" class="grey-border bg-yellow">
+            <h2 id="card-title">{{ note.title }}</h2>
+            <p id="card-description">{{ note.description }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 
 {% endblock %}
