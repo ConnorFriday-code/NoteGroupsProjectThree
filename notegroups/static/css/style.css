@@ -24,7 +24,7 @@ p{
 }
 
 .bg-yellow{
-   background-color: #faf65e; 
+   background-color: #fffb89; 
 }
 
 .bg-grey{
@@ -146,13 +146,14 @@ header{
 
 
 .delete-button{
-    background-color: #ff2c2c;
+    background-color: #e44444;
 }
 
 
-/*------------------------------------------------------------ New Note*/
+/*------------------------------------------------------------ New/Edit Note*/
 
-#new-note-block{
+#new-note-block,
+#edit-note-block{
     margin: auto;
     width: 80%;
     background-color: #fff;
@@ -160,7 +161,8 @@ header{
     display: block;
 }
 
-#new-note-block label{
+#new-note-block label,
+#edit-note-block label{
     font-size: 24px;
     text-decoration: underline;
     text-decoration-color: #dadada;
@@ -168,7 +170,10 @@ header{
 
 #new-note-block label,
 #new-note-block input,
-#new-note-block textarea{
+#new-note-block textarea,
+#edit-note-block label,
+#edit-note-block input,
+#edit-note-block textarea{
     display: block;
     width: 90%;
     margin: 20px auto;
@@ -188,7 +193,8 @@ header{
     overflow: auto;
 }
 
-#new-note-block #title-div{
+#new-note-block #title-div,
+#edit-note-block #title-div{
     padding-top: 20px;
 }
 
@@ -198,20 +204,23 @@ header{
 }
 
 #new-note-block #submit-button,
-#new-note-block #cancel-button{
+#new-note-block #cancel-button,
+#edit-note-block #submit-button,
+#edit-note-block #cancel-button{
     font-size: 32px;
     margin: 20px auto;
     width: 180px;
     height: 60px;
+    border: #dadada 1px solid;
     border-radius: 5px;
 }
 
 #submit-button{
-    background-color: #faf65e;
+    background-color: #fffb89;
 }
 
 #submit-button:hover{
-    background-color: #e0dc4f;
+    background-color: #e9eb79;
 }
 
 #cancel-button{

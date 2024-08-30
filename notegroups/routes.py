@@ -31,3 +31,15 @@ def new_note():
         db.session.commit()
         return redirect(url_for("home"))
     return render_template("new_note.html")
+
+@app.route("/edit_note/<int:note_id>", methods=["GET","POST"])
+def edit_note(note_id):
+    note=Note.query.get_or_404(note_id)
+
+    if request.method=="POST":
+        note.title=request.form.get("title")
+        note.description=request.form.get("description")
+        note.date_updated=datetime.utcnow()
+        db.session.commit()
+        return redirect(url_for("home"))
+    return render_template("edit_note.html", note=note)
