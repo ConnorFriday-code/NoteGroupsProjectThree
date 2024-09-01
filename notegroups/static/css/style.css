@@ -40,6 +40,14 @@ p{
     text-align: center;
 }
 
+.hidden{
+    display: none;
+}
+
+.visible{
+    display: block;
+}
+
 /*------------------------------------------------------------ Header*/
 
 header{
@@ -149,6 +157,61 @@ header{
     background-color: #e44444;
 }
 
+#delete-check-outer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 25;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#delete-check-inner{
+    width: 50%;
+    height: 50%;
+    margin: 50px auto;
+    padding: 3px;
+}
+
+#delete-check-inner h3,
+#delete-check-inner h4{
+    font-size: 32px;
+}
+
+#delete-check-inner h3{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#delete-check-inner h4{
+    word-wrap: break-word;
+}
+
+#final-check{
+    display: flex;
+    justify-content: space-around;
+}
+
+#final-check button,
+#final-check a{
+    border: #dadada 1px solid;
+    border-radius: 5px;
+    line-height: 60px;
+    width: 100px;
+    height: 60px;
+    text-decoration: underline;
+}
+
+#final-check a{
+    background-color: #e44444;
+    color: #000;
+}
+
+
+#final-check button{
+    background-color: #fff;
+}
 
 /*------------------------------------------------------------ New/Edit Note*/
 
@@ -213,6 +276,9 @@ header{
     height: 60px;
     border: #dadada 1px solid;
     border-radius: 5px;
+    color: #000;
+    line-height: 60px;
+    text-decoration: none;
 }
 
 #submit-button{
@@ -258,6 +324,14 @@ footer div{
 }
 
 /*------------------------------------------------------------ Medium/tablet edits*/
+
+@media only screen and (max-width: 800px){
+    /*------------------------------------------------------------ Home*/
+    .note-card{
+        width: 50%;
+        margin: 10px auto;
+    }
+}
 
 /*------------------------------------------------------------ Small/phone edits*/
 
@@ -317,7 +391,23 @@ footer div{
         display: none;
     }
 
-    /*------------------------------------------------------------ new note*/
+    /*------------------------------------------------------------ Home*/
+
+    .note-card{
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    #final-check{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #final-check a{
+        margin-bottom: 10px;
+    }
+
+    /*------------------------------------------------------------ New Note*/
     .button-container{
         width: 100%;
         display: flex;

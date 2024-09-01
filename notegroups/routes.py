@@ -43,3 +43,10 @@ def edit_note(note_id):
         db.session.commit()
         return redirect(url_for("home"))
     return render_template("edit_note.html", note=note)
+
+@app.route("/delete_note/<int:note_id>")
+def delete_note(note_id):
+    note=Note.query.get_or_404(note_id)
+    db.session.delete(note)
+    db.session.commit()
+    return redirect(url_for("home"))
