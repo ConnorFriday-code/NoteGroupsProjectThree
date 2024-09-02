@@ -29,7 +29,7 @@
             <p class="card-description">{{ note.description }}</p>
 
             <!-- Open note -->
-            <a href="#" class="open-button align-centre">Open</a>
+            <a href="{{ url_for('note', note_id=note.id) }}" class="open-button align-centre">Open</a>
         </div>
     </div>
     {% endfor %}

@@ -8,10 +8,6 @@ def home():
     notes=list(Note.query.order_by(Note.date_updated.desc()).all())
     return render_template("home.html", notes=notes)
 
-@app.route("/note")
-def note():
-    return render_template("note.html")
-
 @app.route("/new_note", methods=["GET","POST"])
 def new_note():
     if request.method=="POST":
@@ -47,6 +43,33 @@ def edit_note(note_id):
 @app.route("/delete_note/<int:note_id>")
 def delete_note(note_id):
     note=Note.query.get_or_404(note_id)
+
     db.session.delete(note)
     db.session.commit()
     return redirect(url_for("home"))
+
+@app.route("/note/<int:note_id>", methods=["GET", "POST"])
+def note(note_id):
+    note = Note.query.get_or_404(note_id)
+
+    #Update file time on open
+    note.date_updated = datetime.utcnow()
+
+    if request.method == "POST":
+        # Collect note content
+        note.note_content = request.form.get("content")
+        
+        # Update the file time on saving
+        note.date_updated = datetime.utcnow()
+        
+        # Commit the changes to the database
+        db.session.commit()
+
+        # Redirect to the same note page after saving
+        return redirect(url_for('note', note_id=note.id))
+
+    # Update the time when the note is opened (GET request)
+    note.date_updated = datetime.utcnow()
+    db.session.commit()
+
+    return render_template("note.html", note=note)

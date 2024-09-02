@@ -1,6 +1,37 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3>Note</h3>
+<h1>{{ note.title }}</h1>
 
+<form method="POST" action="{{ url_for('note', note_id=note.id) }}">
+    <!-- Store Quill input -->
+    <input type="hidden" name="content" id="content">
+
+    <div id="note-area">
+        <div id="editor">
+            {{ note.note_content|safe }}
+        </div>
+    </div>
+    <button type="submit">Save</button>
+</form>
+
+{% endblock %}
+
+{% block script %}
+
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+<script>
+    // Initialize Quill editor
+    const quill = new Quill('#editor', {
+        theme: 'snow'
+    });
+
+    // Set the editor content to the note content from the database
+    quill.root.innerHTML = "{{ note.note_content|safe }}";
+
+    // On form submission, set the hidden input value to the HTML content from Quill
+    document.querySelector('form').onsubmit = function() {
+        document.querySelector('#content').value = quill.root.innerHTML;
+    };
+</script>
 {% endblock %}
