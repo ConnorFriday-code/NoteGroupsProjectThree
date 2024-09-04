@@ -62,7 +62,13 @@ header{
 
 #logo-div{
     width: 20%;
+    min-width: 240px;
     border-right: #dadada 1px solid;
+}
+
+#logo-div img{
+    display: block;
+    margin: auto;
 }
 
 #nav-large{
@@ -125,6 +131,7 @@ header{
 .card-title{
     border-bottom: #dadada 1px solid;
     border-radius: 3px;
+    clear: left;
 }
 
 .card-title, .card-description{
