@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1>{{ note.title }}</h1>
+<h1 id="note-title" class="align-centre">{{ note.title }}</h1>
 
 <form method="POST" action="{{ url_for('note', note_id=note.id) }}">
     <!-- Store Quill input -->
@@ -12,7 +12,7 @@
             {{ note.note_content|safe }}
         </div>
     </div>
-    <button type="submit">Save</button>
+    <button id="save-note" class="bg-white" type="submit">Save</button>
 </form>
 
 {% endblock %}
@@ -23,7 +23,13 @@
 <script>
     // Initialize Quill editor
     const quill = new Quill('#editor', {
-        theme: 'snow'
+        theme: 'snow',
+        modules: {
+            toolbar: [
+            [{ header: [1, 2, 3, false] }],
+            ['bold', 'italic', 'underline'],
+            ],
+        },
     });
 
     // Set the editor content to the note content from the database

@@ -304,6 +304,32 @@ header{
     background-color: #d11717;
 }
 
+/*------------------------------------------------------------ Note*/
+
+#note-title{
+    width: 80%;
+    margin: auto;
+}
+
+#note-area{
+width: 80%;
+margin: auto;
+background-color: #fff;
+}
+
+#editor{
+    min-height: 500px;
+}
+
+#save-note{
+    margin: 20px auto;
+    border: #dadada 1px solid;
+    border-radius: 5px;
+    height: 60px;
+    width: 120px;
+    display: block;
+}
+
 /*------------------------------------------------------------ Footer*/
 
 footer{

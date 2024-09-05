@@ -139,7 +139,7 @@ I then used the python interpetor in the terminal to make the postgres database 
 
 #### Submit error
 
-I had noticed while using Quill's api that you can insert an 'a'/href link in the text area. However, when the user uses this feature, they click on a 'save' button to create the link. The note seems to work fine until the user tries to save the note itself later. Saving the note break it for ever by making the note uneditable html afterwards, regardless if the user closes and reopens the note.
+I had noticed while using Quill's api that you can insert an 'a'/href link in the text area. However, when the user uses this feature, they click on a 'save' button to create the link. The note seems to work fine until the user tries to save the note itself later. Saving the note break it for ever by making the note uneditable html afterwards, regardless if the user closes and reopens the note. This also happens with bold text and and the bullet list option.
 
 Before:
 
@@ -149,9 +149,17 @@ Afterwards:
 
 ![After save is clicked](readme_folder/bug-fixing/link-bug-2.png)
 
-Seeing as the edits/additions to the notes are being successfully submitted to the databse, this seems to be a rendering error and not a submission error. A quick google reveals this to be a common and easy to fix issue, with the change being I need to make it so if content includes 'links' or 'special formatting', then use Quill's method to paste HTML. 
+Seeing as the edits/additions to the notes are being successfully submitted to the databse, this seems to be a rendering error and not a submission error. This is further proven with a syntex error on the line of code that edits the text area's html to be filled with the saved html content (quill.root.innerHTML = "{{ note.note_content|safe }}";).
 
-The solution provided is script related and should be put in the script section at the bottom of the page instead of the my javascript folder. This is to make sure Jinja2 is correctly rendered and the script runs after Quill has been initialized.
+Syntax error
+
+No recource
+
+The choice, rewrite whole website to suit quill, or cut css features
+
+Deciding to cut content
+
+Searching through api document and remove
 
 #### Validators
 
