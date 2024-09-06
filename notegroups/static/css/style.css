@@ -88,6 +88,10 @@ header{
     border-left: #dadada 1px solid;
 }
 
+.nav-button:hover{
+    background-color: #e9eb79;
+}
+
 #nav-large .nav-button a{
     width: 100%;
     height: 80px;
@@ -106,8 +110,10 @@ header{
 /*------------------------------------------------------------ Content styling*/
 
 #page-content{
-    height: 60vh;
+    height: 80vh;
     margin: 20px auto;
+    overflow:scroll;
+    margin-bottom: 20px;
 }
 
 /*------------------------------------------------------------ Home*/
@@ -125,7 +131,7 @@ header{
 
 .card-content{
     padding: 5px;
-    height: 100%;
+    height: 320px;
 }
 
 .card-title{
@@ -159,9 +165,24 @@ header{
     background-color: #fff;
 }
 
+.edit-button:hover, .open-button:hover{
+    background-color: #dadada;
+    border-color: #000;
+}
+
+.open-button{
+    margin-top: 20px;
+}
+
 
 .delete-button{
     background-color: #e44444;
+    cursor: pointer;
+}
+
+.delete-button:hover{
+    background-color: #d11717;
+    color: #fff;
 }
 
 #delete-check-outer{
@@ -309,12 +330,20 @@ header{
 #note-title{
     width: 80%;
     margin: auto;
+    border-top: #dadada 2px solid;
+    border-left: #dadada 2px solid;
+    border-right: #dadada 2px solid;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 32px;
 }
 
 #note-area{
 width: 80%;
 margin: auto;
-background-color: #fff;
+border: #dadada 2px solid;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
 }
 
 #editor{
@@ -328,6 +357,12 @@ background-color: #fff;
     height: 60px;
     width: 120px;
     display: block;
+    cursor: pointer;
+}
+
+#save-note:hover{
+    background-color: #dadada;
+    border-color: #000;
 }
 
 /*------------------------------------------------------------ Footer*/
@@ -370,6 +405,12 @@ footer div{
 
 
 @media only screen and (max-width: 600px){
+
+    /*------------------------------------------------------------ Style*/
+
+    #page-content{
+        height: 75vh;
+    }
 
     /*------------------------------------------------------------ Header*/
 

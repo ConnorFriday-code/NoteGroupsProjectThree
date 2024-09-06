@@ -1,17 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1 id="note-title" class="align-centre">{{ note.title }}</h1>
+<!-- Load note title at top of page -->
+<h1 id="note-title" class="align-centre bg-white title-font">{{ note.title }}</h1>
 
+<!-- Form for when it comes to posting user input -->
 <form method="POST" action="{{ url_for('note', note_id=note.id) }}">
+
     <!-- Store Quill input -->
     <input type="hidden" name="content" id="content">
 
-    <div id="note-area">
+    <!-- Note background -->
+    <div id="note-area" class="bg-white">
+        <!-- Note editor area -->
         <div id="editor">
             {{ note.note_content|safe }}
         </div>
     </div>
+
+    <!-- Save/submit button -->
     <button id="save-note" class="bg-white" type="submit">Save</button>
 </form>
 
@@ -25,9 +32,11 @@
     const quill = new Quill('#editor', {
         theme: 'snow',
         modules: {
+            // Decide what options will be in the toolbar
             toolbar: [
-            [{ header: [1, 2, 3, false] }],
-            ['bold', 'italic', 'underline'],
+                // Header options + normal font
+                [{ header: [1, 2, 3, false] }],
+                ['bold', 'italic', 'underline'],
             ],
         },
     });
