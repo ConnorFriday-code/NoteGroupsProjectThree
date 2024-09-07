@@ -25,4 +25,12 @@ $(document).ready(function(){
     $("#cancel-delete").click(function(){
         $("#delete-check-outer").toggleClass("hidden visible")
     })
+
+    $("#search-input").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".note-card").filter(function() {
+            $(this).toggle($(this).find(".card-title").text().toLowerCase().indexOf(value) > -1 ||
+                           $(this).find(".card-description").text().toLowerCase().indexOf(value) > -1);
+        });
+    });
 })

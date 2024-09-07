@@ -2,6 +2,11 @@
 {% block content %}
 
 <div class="note-list">
+        
+    <div id="search-bar" class="grey-border bg-yellow">
+        <input type="text" name="searching" id="search-input" class="grey-border bg-yellow" placeholder="Search notes...">
+    </div>
+
     {% for note in notes %}
     <div class="note-card">
         <div class="grey-border bg-yellow card-content">

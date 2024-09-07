@@ -5,7 +5,14 @@ from datetime import datetime
 
 @app.route("/")
 def home():
-    notes=list(Note.query.order_by(Note.date_updated.desc()).all())
+    search_query = request.args.get('searching', '')
+    if search_query:
+         notes = Note.query.filter(
+        (Note.title.ilike(f'%{search_query}%')) | 
+        (Note.description.ilike(f'%{search_query}%'))
+        ).order_by(Note.date_updated.desc()).all()
+    else:
+        notes=list(Note.query.order_by(Note.date_updated.desc()).all())
     return render_template("home.html", notes=notes)
 
 @app.route("/new_note", methods=["GET","POST"])

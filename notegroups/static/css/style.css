@@ -118,6 +118,11 @@ header{
 
 /*------------------------------------------------------------ Home*/
 
+#search-bar{
+    width: 80%;
+    margin: 20px auto;
+}
+
 .note-list{
     display: flex;
     flex-wrap: wrap;
@@ -231,14 +236,24 @@ header{
     text-decoration: underline;
 }
 
-#final-check a{
+#confirm-delete{
     background-color: #e44444;
     color: #000;
 }
 
+#confirm-delete:hover{
+    background-color: #d11717;
+}
 
-#final-check button{
+
+#cancel-delete{
     background-color: #fff;
+    cursor: pointer;
+}
+
+#cancel-delete:hover{
+    background-color: #dadada;
+    border-color: #000;
 }
 
 /*------------------------------------------------------------ New/Edit Note*/

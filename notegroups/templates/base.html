@@ -19,9 +19,11 @@
     <!-- Entire header section containg the logo and nav -->
     <header class="bg-white grey-border">
         <!-- Logo -->
-        <div id="logo-div">
-            <img src="{{ url_for('static', filename='assets/note_group_logo.png') }}">  
-        </div>
+        <a href="{{ url_for('home') }}" id="logo-div">
+            <div>
+                <img src="{{ url_for('static', filename='assets/note_group_logo.png') }}">  
+            </div>
+        </a>
         <!-- Navigation with two links -->
         <nav id="nav-large">
             <div id="home-button" class="bg-yellow nav-button">
