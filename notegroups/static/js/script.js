@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+    //Dropdown nav menu for mobile
     $("#menu-button").click(function(event){
         if ($("#dropdown-list").css("display") == "none"){
             $("#dropdown-list").css("display", "block")
@@ -8,7 +10,7 @@ $(document).ready(function(){
         }
     })
 
-
+    //Grabbing of id and title to fill delete pop-up
     $(".delete-button").click(function(){
         var noteId = $(this).data("note-id")
         var noteTitle = $(this).data("note-title")
@@ -26,6 +28,7 @@ $(document).ready(function(){
         $("#delete-check-outer").toggleClass("hidden visible")
     })
 
+    //Search function on home page
     $("#search-input").on("keyup", function() {
         var value = $(this).val().toLowerCase();
         $(".note-card").filter(function() {
