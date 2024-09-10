@@ -8,17 +8,22 @@
             <label for="title">Title:</label>
             <input id="title" name="title" type="text" minlength="3" maxlength="50" required>
         </div>
+
         <!-- Note decription input text area -->
         <div>
             <label for="description">Description:</label>
             <textarea id="description" name="description" type="text" maxlength="200" rows="10"></textarea>
         </div>
+
         <!-- Creating a blank file for the 'content' part of the databse -->
         <input type="hidden" name="note_content" id="note_content">
+
         <!-- Buttons -->
         <div class="button-container">
-            <button type="submit" id="submit-button">Submit</button>
-            <a href="{{ url_for('home') }}" id="cancel-button" class="align-centre">Cancel</a>
+            <!-- Submit/create new note -->
+            <button type="submit" id="submit-button" class="grey-border">Submit</button>
+            <!-- Cancel new note -->
+            <a href="{{ url_for('home') }}" id="cancel-button" class="align-centre grey-border">Cancel</a>
         </div>
     </form>
 </div>
@@ -26,13 +31,16 @@
 {% endblock %}
 
 {% block script %}
+<!-- Quill -->
 <script>
     const quill = new Quill('#editor',{
     theme: 'snow',
     });
 
+    // On submit
     document.querySelector('form').addEventListener('submit', function() {
-        // Set hidden input value to the HTML content from Quill
+        // Fill 'content' section of database with hidden (and empty)
+        // input value from note_content to the HTML content from Quill
         document.querySelector('#note_content').value = quill.root.innerHTML;
     });
 

@@ -3,26 +3,34 @@ from notegroups import app, db
 from notegroups.models import Note
 from datetime import datetime
 
+#Home section
 @app.route("/")
 def home():
+    #Search bar
     search_query = request.args.get('searching', '')
+    #Search all notes against search input for matching words
+    #in the title and description section
     if search_query:
          notes = Note.query.filter(
         (Note.title.ilike(f'%{search_query}%')) | 
         (Note.description.ilike(f'%{search_query}%'))
         ).order_by(Note.date_updated.desc()).all()
     else:
+        #If no resualts found then display all
         notes=list(Note.query.order_by(Note.date_updated.desc()).all())
     return render_template("home.html", notes=notes)
 
+#New note
 @app.route("/new_note", methods=["GET","POST"])
 def new_note():
     if request.method=="POST":
+        #If user submits data, grab data
         title = request.form.get("title")
         description = request.form.get("description")
         note_content = request.form.get("note_content")
         date_updated = datetime.utcnow()
 
+        #Fill database with grabbed data
         new_note = Note(
             title=title,
             description=description,
@@ -30,31 +38,42 @@ def new_note():
             date_updated=date_updated
         )
 
+        #Save data
         db.session.add(new_note)
         db.session.commit()
+        #Redirect user back to homepage
         return redirect(url_for("home"))
     return render_template("new_note.html")
 
+#Edit note
 @app.route("/edit_note/<int:note_id>", methods=["GET","POST"])
 def edit_note(note_id):
+
+    #Check if post exists or give a 404
     note=Note.query.get_or_404(note_id)
 
+    #If user submits data then rewrite saved data with new data
     if request.method=="POST":
         note.title=request.form.get("title")
         note.description=request.form.get("description")
         note.date_updated=datetime.utcnow()
         db.session.commit()
+        #Redirect user back home
         return redirect(url_for("home"))
     return render_template("edit_note.html", note=note)
 
+#Delete note
 @app.route("/delete_note/<int:note_id>")
 def delete_note(note_id):
     note=Note.query.get_or_404(note_id)
 
+    #Delete the note
     db.session.delete(note)
     db.session.commit()
+    #Redirect user back home
     return redirect(url_for("home"))
 
+#Note content
 @app.route("/note/<int:note_id>", methods=["GET", "POST"])
 def note(note_id):
     note = Note.query.get_or_404(note_id)

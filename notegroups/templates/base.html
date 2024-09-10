@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Misc meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A simple website to contain all your notes!">
 	<meta name="keywords" content="note, writing">
@@ -18,57 +19,77 @@
 <body>
     <!-- Entire header section containg the logo and nav -->
     <header class="bg-white grey-border">
-        <!-- Logo -->
+        <!-- Logo with url to home page -->
         <a href="{{ url_for('home') }}" id="logo-div">
             <div>
+                <!-- Logo image link -->
                 <img src="{{ url_for('static', filename='assets/note_group_logo.png') }}">  
             </div>
         </a>
         <!-- Navigation with two links -->
         <nav id="nav-large">
+            <!-- Home button div -->
             <div id="home-button" class="bg-yellow nav-button">
+                <!-- Home link -->
                 <a href="{{ url_for('home') }}" class="align-centre title-font">Home</a>
             </div>
+            <!-- New note button div -->
             <div id="new-note-button" class="bg-yellow nav-button">
+                <!-- New note link -->
                 <a href="{{ url_for('new_note') }}" class="align-centre title-font">New Note</a>
             </div>
         </nav>
 
+        <!-- Nav for small screens -->
         <nav id="nav-small">
+            <!-- Menu button for nav dropdown -->
             <div id="menu-button" class="bg-yellow nav-button">
                 <p class="align-centre title-font">Menu</p>
+                <!-- Small screen nav using unordered list -->
                 <ul id="dropdown-list" class="align-centre small-dropdown-hidden">
+                    <!-- Home link -->
                     <li><a href="{{ url_for('home') }}" class="title-font bg-yellow grey-border nav-button">Home</a></li>
+                    <!-- New note link -->
                     <li><a href="{{ url_for('new_note') }}" class="title-font bg-yellow grey-border nav-button">New Note</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
+    <!-- Page content insert point -->
     <div id="page-content">
         {% block content %}
         {% endblock %}
     </div>
 
+    <!-- Footer -->
     <footer class="bg-yellow align-centre">
+        <!-- Legal fluff div -->
         <div id="legal-div">
             <p>Code and logo belong to the owner of the NoteGroups!&copy;</p>
+            <p>Made using SQL and Flask</p>
+            <p>Title fonts belong to Google Fonts</p>
         </div>
+        <!-- Social media link -->
         <div id="social-media">
             <ul id="social-list">
                 <p>Please! Feel free to check out our social media:</p>
-                <li><a href="https://twitter.com/" target="_blank" aria-label="">Twitter</a></li>
-                <li><a href="https://en-gb.facebook.com/" target="_blank" aria-label="">Facebook</a></li>
-                <li><a href="https://www.instagram.com/" target="_blank" aria-label="">Instagram</a></li>
+                <li><a href="https://twitter.com/" target="_blank" aria-label="Link to Twiiter">Twitter</a></li>
+                <li><a href="https://en-gb.facebook.com/" target="_blank" aria-label="Link to Facebook">Facebook</a></li>
+                <li><a href="https://www.instagram.com/" target="_blank" aria-label="Link to instagram">Instagram</a></li>
             </ul>
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <!-- Quill script -->
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <!-- Google jQuery script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Script inserts on unique pages -->
     {% block script %}
     {% endblock %}
+    <!-- Custom script -->
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

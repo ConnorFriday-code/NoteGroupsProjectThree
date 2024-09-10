@@ -118,9 +118,12 @@ header{
 
 /*------------------------------------------------------------ Home*/
 
-#search-bar{
+#search-input{
+    width: 100%;
     width: 80%;
     margin: 20px auto;
+    display: block;
+    padding: 5px;
 }
 
 .note-list{
@@ -243,6 +246,7 @@ header{
 
 #confirm-delete:hover{
     background-color: #d11717;
+    color: #fff;
 }
 
 
@@ -317,27 +321,29 @@ header{
     margin: 20px auto;
     width: 180px;
     height: 60px;
-    border: #dadada 1px solid;
     border-radius: 5px;
-    color: #000;
     line-height: 60px;
     text-decoration: none;
 }
 
 #submit-button{
-    background-color: #fffb89;
+    background-color: #fff;
+    color: #000;
 }
 
 #submit-button:hover{
-    background-color: #e9eb79;
+    background-color: #f4f4f4;
+    border: #000 2px solid;
 }
 
 #cancel-button{
     background-color: #ff2c2c;
+    color: #000;
 }
 
 #cancel-button:hover{
     background-color: #d11717;
+    color: #fff;
 }
 
 /*------------------------------------------------------------ Note*/
@@ -397,6 +403,10 @@ footer div{
     margin: 5px;
 }
 
+#legal-div{
+    flex-direction: column;
+}
+
 #social-list{
     list-style-type: none;
 }
@@ -411,7 +421,7 @@ footer div{
 @media only screen and (max-width: 800px){
     /*------------------------------------------------------------ Home*/
     .note-card{
-        width: 50%;
+        width: 45%;
         margin: 10px auto;
     }
 }
