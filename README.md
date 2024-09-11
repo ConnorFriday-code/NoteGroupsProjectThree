@@ -131,7 +131,17 @@ I then used the python interpetor in the terminal to make the postgres database 
 
 ### Features
 
-#### 404 Page
+#### Home
+
+#### New note
+
+#### Edit note
+
+#### Delete note
+
+#### Open note
+
+### User goals
 
 ### Error solving
 
@@ -149,17 +159,37 @@ Afterwards:
 
 ![After save is clicked](readme_folder/bug-fixing/link-bug-2.png)
 
-Seeing as the edits/additions to the notes are being successfully submitted to the databse, this seems to be a rendering error and not a submission error. This is further proven with a syntex error on the line of code that edits the text area's html to be filled with the saved html content (quill.root.innerHTML = "{{ note.note_content|safe }}";).
+Seeing as the edits/additions to the notes are being successfully submitted to the databse, this seems to be a rendering error and not a submission error. This is further proven with a syntex error on the line of code that edits the text area's html to be filled with the saved html content (quill.root.innerHTML = "{{ note.note_content|safe }}";) (image below).
+
+![Code](readme_folder/bug-fixing/link-bug-5.png)
+
+Looking into the console for an explanation gave two errors:
 
 Syntax error
 
-No recource
+No resource found with given identifier
 
-The choice, rewrite whole website to suit quill, or cut css features
+![Error in console](readme_folder/bug-fixing/link-bug-4.png)
 
-Deciding to cut content
+I promptly search for these errors involving Quill, yet do not find any results related to my problem. The reason for this I believe is that quill uses its own method to save its data using the methods getContent and setContent. Yet, even when implmenting these two methods into my code, I still encountered errors. After 8 hours, I still could not get the text editor to accept any special characters or CSS styling in the text editor area.
 
-Searching through api document and remove
+This led to me having to make the choice: rewriting the website, database, routes, and javascript files, or, cutting out the CSS/special characters features.
+
+Due to time restraint of the project, I decided to cut the features instead of trying to fix an api I did not understand. Thus bug fixing now became trying to find a way to remove the features currently breaking the editor.
+
+Searching the api documents I find the section that discussed the toolbar and options. The link to it is <a href="https://quilljs.com/docs/modules/toolbar" target="_blank">here</a>
+
+There it lists code to be put into the script section of a html page to dictate what options will be available to the user, and using this, cut down the available selection down to: headers, bold, italic, and underline.
+
+![Code list](readme_folder/bug-fixing/link-bug-6.png)
+
+I have tested that the remaining options do not break the editor.
+
+![Updated code](readme_folder/bug-fixing/link-bug-7.png)
+
+Now, regardless if I use any of the remaining options in any combonation, the editor will save and display without breaking.
+
+![Test editor with all options](readme_folder/bug-fixing/link-bug-8.png)
 
 #### Validators
 

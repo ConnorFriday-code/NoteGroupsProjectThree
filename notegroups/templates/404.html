@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Misc meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple website to contain all your notes!">
+	<meta name="keywords" content="note, writing">
+    <title>Note Groups!</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <!-- Quill stylesheet -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+</head>
+<body>
+    <div id="404-area">
+        <img id="404-logo" src="{{ url_for('static', filename='assets/note_group_logo.png') }}">
+        <div id="404-message">
+            <h1>Error</h1>
+            <p>Sorry! Something has gone wrong!</p>
+            <a href="{{ url_for('home') }}">Return Home</a>
+        </div>
+    </div>
+</body>
+</html>
