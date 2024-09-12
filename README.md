@@ -40,10 +40,20 @@ Additional features I wish for the website are to be user complimentary features
 
 I wish to mimic the appearence of paper notes, like the lined paper in a note book or a shopping list, and as such I have decided to go for a white background, light grey accents/borders, and pale/soft colours. Then further borrowing the aesthetics from sticky notes, I came to the decision that my colours could be green, yellow, blue, or pink, the most common and famous colours of sticky notes, and ultimately decided I will go with a pale yellow.
 
-I decided to choose yellow due to two reasons:
+I decided to choose yellow due to three reasons:
 
 1. Colour theory explains the colour yellow is assossiated with happyness, with pleasent positive emotions
 2. The same yellow can be used as for the high-lighter if I can add the additional goal of css styling being saved to the database, create a constant colour pallete across the webpage
+3. It matches the colour of standard paper notes
+
+I decided to choose white due to two reasons:
+1. The colour white has high contrast range, especially with black which is standard
+2. The brightness/high value keeps the website feeling light and enegetic
+
+I decided to choose light grey due to two reasons:
+1. It works as a good border/accent colour to both yellow and white
+2. It matches the colour of the lines usually found in notes and note pads
+3. Not an aggressive colour, it will not tear the user's attention away from the content of the website by being distracting
 
 With my choices of white, grey, and pale yellow chosen, I have decided to dedicate these colours to:
 
@@ -131,17 +141,17 @@ I then used the python interpetor in the terminal to make the postgres database 
 
 ### Features
 
-#### Home
+By comparing my notes of listed features, both 'minimum viable product goals' and 'additional goals', from the start of the README, I can test if I have achieved them.
 
-#### New note
+#### Current Features
 
-#### Edit note
-
-#### Delete note
-
-#### Open note
+#### Features to be added
 
 ### User goals
+
+### Languages Used
+
+### Frameworks, Libraries & Programs Used
 
 ### Error solving
 
@@ -191,10 +201,55 @@ Now, regardless if I use any of the remaining options in any combonation, the ed
 
 ![Test editor with all options](readme_folder/bug-fixing/link-bug-8.png)
 
-#### Validators
+## Testing
+
+### BBD vs TDD
+
+#### Differences between BDD and TDD
+
+The main difference between BDD (Behaviour Driven Development) and TDD (Test Driven Development) is that BDD is about tests being done manually while TDD is about tests being checked automatically by the computer. TDD is written before the software and improved to meet updated goals, the cycle repeating over and over until the product is finished and passes all tests. BDD is tested as the code is written against the user stories, with the user manually checking changes on different media and screen sizes until completion. BDD tests can cause the program to end up feeling more intuitive and require no software, leading it to be simpler for a developer. Meanwhile, TDD can test extreme conditions and more conditions at a very fast rate, causing the program to end up being more stable.
+
+#### Why I chose BDD testing
+
+#### BDD example with group notes
+
+When I, the user, enter the website, I wish:
+* To be able to navigate the navigation bar with ease
+* To be able to edit the my notes
+* To have all links work
+
+### Testing user goals using BDD
+
+Using the user goals I listed at the start of the README, I can use BDD testing to check if I have achieved the goals:
+
+#### First-time users
+
+#### Returning user
+
+#### Dedicated user
+
+### Validators
 
 ## Technology Used
 
-### Code
-### Media/Content
+### Code/Media/Content
+
+<a href="https://validator.w3.org/">W3C</a>
+
+Used to find errors and help correct them in my HTML.
+
+<a href="https://jigsaw.w3.org/css-validator/">Jigsaw</a>
+
+Used to find errors and help correct them in my CSS.
+
+<a href="https://jshint.com/">jshint</a>
+
+Used to find errors and help correct them in my JS.
+
+<a href="https://fonts.google.com/">Google Fonts</a>
+
+Used in title elements using the Ubuntu family of fonts.
+
 ### Thanks And Acknowledgements
+
+Code Institute for teaching me the knowledge of web development and providing a library of resources to return to for help.
