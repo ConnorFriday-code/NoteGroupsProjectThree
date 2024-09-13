@@ -172,6 +172,8 @@ I then add, commit, and push this all to GitHub.
 
 By comparing my notes of listed features, both 'minimum viable product goals' and 'additional goals', from the start of the README, I can test if I have achieved them.
 
+# DO THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 #### Current Features
 
 * Home page list all notes with ordering by last opened/edited
