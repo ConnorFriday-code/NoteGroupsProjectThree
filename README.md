@@ -1,4 +1,3 @@
-![Logo of Note Groups!]()
 # Note Groups!
 
 ## UX
@@ -12,7 +11,7 @@ The minumum viable product would have the home page list all Notes with no speci
 
 #### Additional goals
 
-Additional features I wish for the website are to be user complimentary features. A search bar at the top of the homepage to search through existing Notes, and when no results are found, instead offer a link to the Create Note page. Inside the Note page, the user will have the ability to add basic text effects to the documents, such as bold, italic and crossed-out text, as well as change font size, font colour, and font background/highlight, with these css stylings being saved to the database as well. The list of notes on the Homepage to be ordered by the last saved document. Add a way for the user to add multiple notes/text documents to a Note (to make a 'Note Group').
+Additional features I wish for the website are to be user complimentary features. A search bar at the top of the homepage to search through existing Notes, and when no results are found, instead offer a link to the Create Note page. Inside the Note page, the user will have the ability to add basic text effects to the documents, such as bold, italic and underline text, as well as change font size, font colour, and font background/highlight, with these css stylings being saved to the database as well. The list of notes on the Homepage to be ordered by the last saved document. Add a way for the user to add multiple notes/text documents to a Note (to make a 'Note Group').
 
 ### User goals
 
@@ -78,7 +77,7 @@ With my choices of white, grey, and pale yellow chosen, I have decided to dedica
 
 Text will remain generic black unless specified elsewhere.
 
-#### Wireframes and logic
+#### Wireframes And Logic
 
 #### Wireframe
 
@@ -110,10 +109,7 @@ Down below is the planned database columns and their data storage types.
 
 ### Deployment
 
-#### GitHub
-#### Heroku And The Database
-
-#### Creating the database
+#### Creating The Database For My Website
 
 The first step was installing Flask, SQLAlchemy, and psycop using the following command line in the terminal:
 
@@ -139,25 +135,70 @@ I then used the python interpetor in the terminal to make the postgres database 
 
 ![Python in terminal to add table to the database](<readme_folder/creating_database/new database_4.png>)
 
+#### GitHub
+
+After creating my website, the first step was to set up a requirements.txt file which will contain the Python dependencies, this can be done by using the terminal and inputting the following command:
+
+    pip freeze --local > requirements.txt
+
+Next, Heroku requires a Procfile with a command to run my program/website. As such, I created a new file called 'Procfile' and filled it with the following line at the bottom with no spaces or paragraphs afterwards.
+
+    web: python run.py
+
+The stage afterwards is to open up my init file and add an 'if' statement as seen below:
+
+    if os.environ.get("DEVELOPMENT") == "True":
+        app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URL")
+    else:
+        app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL")
+
+Then I needed to make sure SQLAlchemy can read our database, and this is done by making sure the url starts with: 'postgresql://'. However, this should not be changed in the environment variable, so I added this to the 'else' statement from above. So now it is:
+
+    if os.environ.get("DEVELOPMENT") == "True":
+        app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URL")
+    else:
+        uri = os.environ.get("DATABASE_URL")
+        if uri.startswith("postgres://"):
+            uri = uri.replace("postgres://", "postgresql://", 1)
+        app.config["SQLALCHEMY_DATABASE_URI"] = uri
+
+I then add, commit, and push this all to GitHub.
+
+#### Heroku And The Database
+
+
+
 ### Features
 
 By comparing my notes of listed features, both 'minimum viable product goals' and 'additional goals', from the start of the README, I can test if I have achieved them.
 
 #### Current Features
 
-#### Features to be added
+* Home page list all notes with ordering by last opened/edited
 
-### User goals
+![Home page with test files laid out correctly](readme_folder/features/features-home-layout.png)
 
-### Languages Used
+* Notes when clicked on will open a page containing text saved to the document id in the database.
 
-### Frameworks, Libraries & Programs Used
+* The Create Note link successfully creates a new note that will store content into the database, then appears on the homepage.
 
-### Error solving
+* A search bar at the top of the homepage to search through existing Notes
 
-#### Bug fixing
+* Inside the Note the user has the ability to add basic text effects to the documents, such as bold, italic and underlined
 
-#### Submit error
+#### Features To Be Added
+
+* Searchbar will offer a link to create a new note if no results are found
+
+* CSS functions in the notepage, for example, highlighting and text colour
+
+* Add a way for the user to add multiple notes/text documents to a Note (to make a 'Note Group')
+
+### Error Solving
+
+#### Bug Fixing
+
+#### Submit Error
 
 I had noticed while using Quill's api that you can insert an 'a'/href link in the text area. However, when the user uses this feature, they click on a 'save' button to create the link. The note seems to work fine until the user tries to save the note itself later. Saving the note break it for ever by making the note uneditable html afterwards, regardless if the user closes and reopens the note. This also happens with bold text and and the bullet list option.
 
@@ -205,34 +246,50 @@ Now, regardless if I use any of the remaining options in any combonation, the ed
 
 ### BBD vs TDD
 
-#### Differences between BDD and TDD
+#### Differences Between BDD And TDD
 
 The main difference between BDD (Behaviour Driven Development) and TDD (Test Driven Development) is that BDD is about tests being done manually while TDD is about tests being checked automatically by the computer. TDD is written before the software and improved to meet updated goals, the cycle repeating over and over until the product is finished and passes all tests. BDD is tested as the code is written against the user stories, with the user manually checking changes on different media and screen sizes until completion. BDD tests can cause the program to end up feeling more intuitive and require no software, leading it to be simpler for a developer. Meanwhile, TDD can test extreme conditions and more conditions at a very fast rate, causing the program to end up being more stable.
 
-#### Why I chose BDD testing
+#### Why I Chose BDD Testing
 
-#### BDD example with group notes
+#### BDD Example With Group Notes
 
 When I, the user, enter the website, I wish:
 * To be able to navigate the navigation bar with ease
 * To be able to edit the my notes
 * To have all links work
 
-### Testing user goals using BDD
+### Testing User Goals Using BDD
 
 Using the user goals I listed at the start of the README, I can use BDD testing to check if I have achieved the goals:
 
-#### First-time users
+#### First-time Users
 
-#### Returning user
+#### Returning User
 
-#### Dedicated user
+#### Dedicated User
 
 ### Validators
 
 ## Technology Used
 
-### Code/Media/Content
+### Languages Used
+
+HTML
+
+CSS
+
+Python
+
+Javascript
+
+jQuery
+
+Flask
+
+SQL
+
+### Code, Media, Content, Frameworks, Libraries, & Programs Used
 
 <a href="https://validator.w3.org/">W3C</a>
 
