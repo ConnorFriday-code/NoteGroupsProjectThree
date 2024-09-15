@@ -166,29 +166,59 @@ I then add, commit, and push this all to GitHub.
 
 #### Heroku And The Database
 
-
+# DO THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ### Features
 
 By comparing my notes of listed features, both 'minimum viable product goals' and 'additional goals', from the start of the README, I can test if I have achieved them.
 
-# DO THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 #### Current Features
 
 * Home page list all notes with ordering by last opened/edited
 
-![Home page with test files laid out correctly](readme_folder/features/features-home-layout.png)
+The home page lists all notes created by the user, and lists them by the date in which they were opened. Each note has three buttons that can edit, delete, and open notes to be read. The bold yellow background of the notes, buttons, and search bar against the white backbground of the page makes them stand out brightly, and by making them all interactive as well, it creates a consistant message to user just entering the website: yellow usually contains something interactive. The note buttons and nav buttons all react to user input, and when hovered over their styling changes.
 
-* Notes when clicked on will open a page containing text saved to the document id in the database.
+The page itself is interactive, shifting the layout and preportions for different screen sizes. The number of notes displayed on the page in a row changes from 3 on large screens, 2 on medium screens, and 1 on small screens.
 
-* The Create Note link successfully creates a new note that will store content into the database, then appears on the homepage.
+![Home page with test files laid out correctly on computer](readme_folder/features/features-home-layout.png)
+
+![Home page with test files laid out correctly on mobile](readme_folder/features/features-home-layout-mobile.png)
 
 * A search bar at the top of the homepage to search through existing Notes
 
+The home page has a search bar to allow the user to quickly locate desired notes. The search bar updates on every user input, and hides notes that do not match the user's input.
+
+![Search bar on the home page](readme_folder/features/features-search-bar.png)
+
+* The New Note link successfully creates a new note that will store content into the database, then appears on the homepage.
+
+Clicking on the nav button New Note brings the user to a new page where then can create data to be stored into the database. Upon creation, the home page will automatically update with the new note.
+
+![New note with title and description of Test 6](readme_folder/features/features-new-note-page.png)
+
+![Test 6 note upon creation appears in the home page](readme_folder/features/features-new-note-updated.png)
+
+* Edit page button will allow the user to edit the note
+
+The edit button contained on every note will open up a page very similar to the New Note page. This time the input fields will be filled with the user's previous saved input to allow for easy updating/editing of the notes description and title before letting the user save the changes to the database.
+
+![Edit note page](readme_folder/features/features-edit-note.png)
+
+* Notes when clicked on will open a page containing text saved to the document id in the database.
+
+Upon clicking the open button on a note, it will load a page that will display the 'content' of the note. This is a rich text area handled by Quill's Api. Here, the user can create, edit, delete, read, and save content to the database.
+
+![Note main content page](readme_folder/features/features-note-content.png)
+
 * Inside the Note the user has the ability to add basic text effects to the documents, such as bold, italic and underlined
 
+Thanks to the rich text area provided and handled by Quill, the user has the ability to add titles, bold text, italic text, and underlined text to the text area. All of this is saved to the database in a Text format for quick and easy unpacking later.
+
+![Note main content with styling](readme_folder/features/features-note-content-options.png)
+
 #### Features To Be Added
+
+Due to time restrictions, these are features I listed at the start of the README but have not been completed. All of them are listed as additional goals and not anything required to make a minimum viable product.
 
 * Searchbar will offer a link to create a new note if no results are found
 
@@ -200,7 +230,7 @@ By comparing my notes of listed features, both 'minimum viable product goals' an
 
 #### Bug Fixing
 
-#### Submit Error
+Submit Error
 
 I had noticed while using Quill's api that you can insert an 'a'/href link in the text area. However, when the user uses this feature, they click on a 'save' button to create the link. The note seems to work fine until the user tries to save the note itself later. Saving the note break it for ever by making the note uneditable html afterwards, regardless if the user closes and reopens the note. This also happens with bold text and and the bullet list option.
 
@@ -267,9 +297,48 @@ Using the user goals I listed at the start of the README, I can use BDD testing 
 
 #### First-time Users
 
+- To be able to quickly and easily navigate the layout of the website
+
+The navigation bar and note buttons are easy to navigate with text clearly stating what they are. Text and colours are bold, interactive, and clearly visible, making them have strong readability.
+
+![Home page with buttons clearly visible](readme_folder/features/features-home-layout.png)
+
+- To be able to create a new note in three clicks or less
+
+From anywhere on the website, the user can select the nav link to create a new note in one click on large/medium screens or two clicks on mobile.
+
+![Nav bar on large screens](readme_folder/testing/testing-new-note-large.png)
+
+![Nav bar on small screens](readme_folder/testing/testing-new-note-small.png)
+
+- To be able to create a note and save it to the database
+
+Creating a new note successfully gets saved to the database to be brought up and used again later.
+
+![Creating new note](readme_folder/features/features-new-note-page.png)
+
+![New note created and saved to database](readme_folder/features/features-new-note-page.png)
+
 #### Returning User
 
+- To be able to load already created notes
+
+Created notes can be opened on the homepage.
+
+![Existing note on homepage](readme_folder/features/features-new-note-updated.png)
+
+![Note opened](readme_folder/features/features-note-content.png)
+
+# Do this!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+- To be able to edit old notes and have those changes replace the old document
+- To be able to delete a note in four clicks while still having protective 
+
 #### Dedicated User
+
+- To be able to search through multiple notes on the homapage with ease by making notes titles clear, easy to read, and possibly with a search bar
+- For notes to load quickly even at larger sizes
+- For the homepage to load notes at an acceptable speed
 
 ### Validators
 
