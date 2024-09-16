@@ -329,16 +329,43 @@ Created notes can be opened on the homepage.
 
 ![Note opened](readme_folder/features/features-note-content.png)
 
-# Do this!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 - To be able to edit old notes and have those changes replace the old document
-- To be able to delete a note in four clicks while still having protective 
+
+On the home page there is a button on every note that allows the editing of the title and description of the note. The main content of the note can also be opened and changed in the note rich text editor.
+
+![Edit field for title and description](readme_folder/features/features-edit-note.png)
+
+![Edit field of note content](readme_folder/features/features-note-content.png)
+
+- To be able to delete a note in four clicks while still having protective measures
+
+When it comes to deleting a note, it can be achieved in two clicks, bringing it well within the targetted number of clicks. When deleting a file, it will first bring up a pop-up that will ask the user to confirm they wish to delete the note, adding a protective measure to data deletion.
+
+![Note's first delete button](readme_folder/testing/testing-delete-button-1.png)
+
+![Note's second delete button](readme_folder/testing/testing-delete-button-2.png)
 
 #### Dedicated User
 
 - To be able to search through multiple notes on the homapage with ease by making notes titles clear, easy to read, and possibly with a search bar
+
+Titles are bold and easy to read. A functioning search bar also exists to help siff through notes.
+
+![Note titles are bold and have good contrast to the background](testing-note-title.png)
+
+![Search bar](readme_folder/features/features-search-bar.png)
+
 - For notes to load quickly even at larger sizes
+
+Simple text and styling causes notes to load at a rapid pace, even as their size begins to grow large.
+
+# Page load times here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 - For the homepage to load notes at an acceptable speed
+
+Due to notes not having images, limted styling, and limited text length, the load they put on load times is minimal.
+
+# Page load times here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ### Validators
 
@@ -377,6 +404,18 @@ Used to find errors and help correct them in my JS.
 <a href="https://fonts.google.com/">Google Fonts</a>
 
 Used in title elements using the Ubuntu family of fonts.
+
+<a href="https://jquery.com/">jQuery</a>
+
+Used in the interactive elements within my website.
+
+<a href="">Flask</a>
+
+Used for creating the backend of the website, managing routes, handling requests, and rendering templates.
+
+<a href="https://www.sqlalchemy.org/">SQLAlchemy</a>
+
+Used for database management, enabling interaction with the database, and mapping objects to database tables.
 
 ### Thanks And Acknowledgements
 
