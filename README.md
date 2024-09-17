@@ -369,6 +369,14 @@ Due to notes not having images, limted styling, and limited text length, the loa
 
 ### Validators
 
+#### Home
+
+#### New Note
+
+#### Edit Note
+
+#### Note
+
 ## Technology Used
 
 ### Languages Used
