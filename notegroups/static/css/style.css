@@ -3,7 +3,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #4a555a;
 }
 
 p{
@@ -24,7 +24,7 @@ p{
 }
 
 .bg-yellow{
-   background-color: #fffb89; 
+   background-color: #fcf76f; 
 }
 
 .bg-grey{
@@ -32,7 +32,7 @@ p{
 }
 
 .grey-border{
-    border: #dadada 2px solid;
+    border: #474735 2px solid;
     border-radius: 5px;
 }
 
@@ -63,7 +63,7 @@ header{
 #logo-div{
     width: 20%;
     min-width: 240px;
-    border-right: #dadada 1px solid;
+    border-right: #474735 1px solid;
 }
 
 #logo-div img{
@@ -85,11 +85,11 @@ header{
     width: 50%;
     height: 100%;
     display: flex;
-    border-left: #dadada 1px solid;
+    border-left: #474735 1px solid;
 }
 
 .nav-button:hover{
-    background-color: #e9eb79;
+    background-color: #e4df63;
 }
 
 #nav-large .nav-button a{
@@ -332,7 +332,7 @@ header{
 }
 
 #submit-button:hover{
-    background-color: #f4f4f4;
+    background-color: #dadada;
     border: #000 2px solid;
 }
 
@@ -351,9 +351,9 @@ header{
 #note-title{
     width: 80%;
     margin: auto;
-    border-top: #dadada 2px solid;
-    border-left: #dadada 2px solid;
-    border-right: #dadada 2px solid;
+    border-top: #474735 2px solid;
+    border-left: #474735 2px solid;
+    border-right: #474735 2px solid;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     font-size: 32px;
@@ -362,7 +362,7 @@ header{
 #note-area{
 width: 80%;
 margin: auto;
-border: #dadada 2px solid;
+border: #474735 2px solid;
 border-bottom-left-radius: 5px;
 border-bottom-right-radius: 5px;
 }

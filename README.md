@@ -5,6 +5,10 @@
 ### Project Goal
 The goal of 'Note Groups!' is to create a website that hosts documents created by the user. The website will be broken into three template webpages: Home, Note, and Create Note. Home will display all created notes as postit notes, which when clicked on will take the user to that note. The note will be displayed on the Note page, and will be filled in with data from the database. Lastily, the link Create Note will lead the user to a page where they name and create a new note, which will automatically load the new note on creation.
 
+### Audience
+
+Group Notes is targetted at users requiring simple and quick notes, for example, students or workers required to take quick notes to be filled out a form at later date. As such, the website has to be: simple, quick, and easy to navigate. Due to this the website has to be minimalist in design and layout, with options to add basic titles and text styling to the notes. The business plan is to use the social links in the footer to bring users to other products and awerness to the company/brand.
+
 #### Minimum viable product goals
 
 The minumum viable product would have the home page list all Notes with no specified ordering and no styling, displaying the title the user gives the document. These Notes when clicked on will open a page containing text saved to the document id in the database. The Create Note link will successfully create a new note that will store content into the database and appear on the homepage.
