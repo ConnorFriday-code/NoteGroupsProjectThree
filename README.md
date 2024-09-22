@@ -288,6 +288,34 @@ Now, regardless if I use any of the remaining options in any combonation, the ed
 
 ![Test editor with all options](readme_folder/bug-fixing/link-bug-8.png)
 
+<br>
+
+<strong>Updating database error</strong>
+
+After creating a basic running product, I went back to my module to add a second schema called Tag. This will be a foreign key tagged onto the Note schema to help 'group' the notes. Once I created it I updated the database in the terminal.
+
+![Updated database](readme_folder/bug-fixing/database-error-1.png)
+
+    from notegroups import db
+    db.create_all()
+
+After doing this though, SQL threw an error, stating that 'note.tag_id' did not exist in my database.
+
+![Error from SQL](readme_folder/bug-fixing/database-error-2.png)
+
+My first step in fixing this was verifying the databse has updated at all and the state of the note schema.
+
+![Verify update to databse](readme_folder/bug-fixing/database-error-3.png) 
+![Checking note schema](readme_folder/bug-fixing/database-error-4.png)
+
+The update has gone through but did not update the note schema with the new tag_id as the error had reported. As such I needed to update databse with the new line, and decided to simply type out the updated code with the ALTER TABLE command.
+
+    ALTER TABLE note ADD COLUMN tag_id INTEGER REFERENCES tag(id);
+
+![Databse updated](readme_folder/bug-fixing/database-error-5.png)
+
+This fixed the bug and now the website loads.
+
 ## Testing
 
 ### BBD vs TDD
