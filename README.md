@@ -174,6 +174,16 @@ I then add, commit, and push this all to GitHub.
 
 ### Features
 
+#### CRUD
+
+#### Create
+
+#### Read
+
+#### Update
+
+#### Delete
+
 By comparing my notes of listed features, both 'minimum viable product goals' and 'additional goals', from the start of the README, I can test if I have achieved them.
 
 #### Current Features

@@ -1,6 +1,6 @@
 from flask import render_template, request, redirect, url_for
 from notegroups import app, db
-from notegroups.models import Note
+from notegroups.models import Note, Tag
 from datetime import datetime
 
 #Home section
@@ -14,6 +14,7 @@ def home():
          notes = Note.query.filter(
         (Note.title.ilike(f'%{search_query}%')) | 
         (Note.description.ilike(f'%{search_query}%'))
+        (Tag.name.ilike(f%{search_query}))
         ).order_by(Note.date_updated.desc()).all()
     else:
         #If no resualts found then display all

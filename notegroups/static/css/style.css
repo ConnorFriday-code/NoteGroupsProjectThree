@@ -33,7 +33,7 @@ p{
 
 .grey-border{
     border: #474735 2px solid;
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
 .align-centre{
@@ -48,12 +48,17 @@ p{
     display: block;
 }
 
+.margin-boost{
+    margin-bottom: 10vh;
+}
+
 /*------------------------------------------------------------ Header*/
 
 header{
     display: flex;
     height: 80px;
     position: relative;
+    background-color: #4a555a;
 }
 
 #nav-small{
@@ -129,7 +134,7 @@ header{
 .note-list{
     display: flex;
     flex-wrap: wrap;
-    margin: 40px;
+    margin: 40px 40px 10vh;
 }
 
 .note-card{
@@ -264,7 +269,7 @@ header{
 
 #new-note-block,
 #edit-note-block{
-    margin: auto;
+    margin: auto auto 10vh;
     width: 80%;
     background-color: #fff;
     position: relative;
@@ -357,6 +362,7 @@ header{
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     font-size: 32px;
+    overflow-wrap: break-word;
 }
 
 #note-area{
@@ -434,7 +440,7 @@ footer div{
     /*------------------------------------------------------------ Style*/
 
     #page-content{
-        height: 75vh;
+        height: 70vh;
     }
 
     /*------------------------------------------------------------ Header*/

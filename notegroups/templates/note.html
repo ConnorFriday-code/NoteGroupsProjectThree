@@ -5,7 +5,7 @@
 <h1 id="note-title" class="align-centre bg-white title-font">{{ note.title }}</h1>
 
 <!-- Form for when it comes to posting user input -->
-<form method="POST" action="{{ url_for('note', note_id=note.id) }}">
+<form method="POST" action="{{ url_for('note', note_id=note.id) }}" class="margin-boost">
 
     <!-- Store Quill input -->
     <input type="hidden" name="content" id="content">
