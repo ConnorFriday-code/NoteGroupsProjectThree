@@ -9,15 +9,15 @@ def home():
     #Search bar
     search_query = request.args.get('searching', '')
     #Search all notes against search input for matching words
-    #in the title and description section
+    #in the title, description, and tag section
     if search_query:
-         notes = Note.query.filter(
+         notes = Note.query.join(Tag).filter(
         (Note.title.ilike(f'%{search_query}%')) | 
-        (Note.description.ilike(f'%{search_query}%'))
-        (Tag.name.ilike(f%{search_query}))
+        (Note.description.ilike(f'%{search_query}%')) |
+        (Tag.name.ilike(f'%{search_query}%'))
         ).order_by(Note.date_updated.desc()).all()
     else:
-        #If no resualts found then display all
+        #If not doing a search, then dispaly all
         notes=list(Note.query.order_by(Note.date_updated.desc()).all())
     return render_template("home.html", notes=notes)
 
@@ -29,14 +29,23 @@ def new_note():
         title = request.form.get("title")
         description = request.form.get("description")
         note_content = request.form.get("note_content")
+        tag_name = request.form.get("tag")
         date_updated = datetime.utcnow()
+
+        #Check if tag exists already, if not, create it
+        tag = Tag.query.filter_by(name=tag_name).first()
+        if not tag:
+            tag=Tag(name=tag_name)
+            db.session.add(tag)
+            db.session.commit()
 
         #Fill database with grabbed data
         new_note = Note(
             title=title,
             description=description,
             note_content=note_content,
-            date_updated=date_updated
+            date_updated=date_updated,
+            tag_id=tag.id
         )
 
         #Save data
@@ -57,7 +66,16 @@ def edit_note(note_id):
     if request.method=="POST":
         note.title=request.form.get("title")
         note.description=request.form.get("description")
+        tag_name = request.form.get("tag")
         note.date_updated=datetime.utcnow()
+
+        #Check if edited tag exists already, if not, create it
+        tag = Tag.query.filter_by(name=tag_name).first()
+        if not tag:
+            tag=Tag(name=tag_name)
+            db.session.add(tag)
+            db.session.commit()
+
         db.session.commit()
         #Redirect user back home
         return redirect(url_for("home"))

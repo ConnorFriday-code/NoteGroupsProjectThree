@@ -272,7 +272,7 @@ I promptly search for these errors involving Quill, yet do not find any results 
 
 This led to me having to make the choice: rewriting the website, database, routes, and javascript files, or, cutting out the CSS/special characters features.
 
-Due to time restraint of the project, I decided to cut the features instead of trying to fix an api I did not understand. Thus bug fixing now became trying to find a way to remove the features currently breaking the editor.
+Due to time restraint of the project, I decided to cut the features instead of trying to fix an api I did not understand. Thus bug fixing now became trying to find a way to remove the features currently breaking the rich text editor.
 
 Searching the api documents I find the section that discussed the toolbar and options. The link to it is <a href="https://quilljs.com/docs/modules/toolbar" target="_blank">here</a>
 
@@ -305,7 +305,8 @@ After doing this though, SQL threw an error, stating that 'note.tag_id' did not 
 
 My first step in fixing this was verifying the databse has updated at all and the state of the note schema.
 
-![Verify update to databse](readme_folder/bug-fixing/database-error-3.png) 
+![Verify update to databse](readme_folder/bug-fixing/database-error-3.png)
+
 ![Checking note schema](readme_folder/bug-fixing/database-error-4.png)
 
 The update has gone through but did not update the note schema with the new tag_id as the error had reported. As such I needed to update databse with the new line, and decided to simply type out the updated code with the ALTER TABLE command.

@@ -9,6 +9,8 @@ class Note(db.Model):
     date_updated = db.Column(db.DateTime, nullable=False, default=db.func.now(), onupdate=db.func.now())
     tag_id = db.Column(db.Integer, db.ForeignKey('tag.id'), nullable=True)
 
+    tag = db.relationship('Tag', backref='notes', lazy=True)
+
     def __repr__(self):
         return f"Note{self.id} - {self.title} - {self.description}"
 

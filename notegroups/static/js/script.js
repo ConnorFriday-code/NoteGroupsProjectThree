@@ -36,12 +36,15 @@ $(document).ready(function(){
         $("#delete-check-outer").toggleClass("hidden visible")
     })
 
-    //Search function on home page
+    // Search function on home page
     $("#search-input").on("keyup", function() {
         var value = $(this).val().toLowerCase();
         $(".note-card").filter(function() {
-            $(this).toggle($(this).find(".card-title").text().toLowerCase().indexOf(value) > -1 ||
-                           $(this).find(".card-description").text().toLowerCase().indexOf(value) > -1);
+            $(this).toggle(
+                $(this).find(".card-title").text().toLowerCase().indexOf(value) > -1 ||
+                $(this).find(".card-description").text().toLowerCase().indexOf(value) > -1 ||
+                $(this).find(".card-tag").text().toLowerCase().indexOf(value) > -1
+            );
         });
     });
 })

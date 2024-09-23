@@ -32,9 +32,10 @@
             </button>
             </div>
 
-            <!-- Title and description of note -->
+            <!-- Title, description, and tag of note -->
             <h2 class="card-title">{{ note.title }}</h2>
             <p class="card-description">{{ note.description }}</p>
+            <p class="card-tag"><strong>Tag: </strong>{{ note.tag.name if note.tag else "No tag given" }}</p>
 
             <!-- Open note for full content editing-->
             <a href="{{ url_for('note', note_id=note.id) }}" class="open-button align-centre">Open</a>

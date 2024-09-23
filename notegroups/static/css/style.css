@@ -153,7 +153,16 @@ header{
     clear: left;
 }
 
-.card-title, .card-description{
+.card-description{
+    border-bottom: #dadada 1px solid;
+    border-radius: 3px;
+}
+
+.card-tag{
+    padding-top: 10px;
+}
+
+.card-title, .card-description, .card-tag{
     word-wrap: break-word;
 }
 
