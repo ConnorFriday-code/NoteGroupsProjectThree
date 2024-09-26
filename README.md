@@ -58,15 +58,12 @@ I decided to choose light grey due to two reasons:
 2. It matches the colour of the lines usually found in notes and note pads
 3. Not an aggressive colour, it will not tear the user's attention away from the content of the website by being distracting
 
-With my choices of white, grey, and pale yellow chosen, I have decided to dedicate these colours to:
+With my main colour choices of white, grey, and pale yellow chosen, I have decided to dedicate these colours to:
 
 ##### White
-- The background of all pages
 - The background of the notes
-- The background of buttons
-- The background of the header
-- The text colour of buttons on click/mousedown
-- Footer text colour
+- The background of buttons releated to creating/updating the database
+- The text colour of cancel buttons on click/mousedown
 
 ##### Grey
 - Borders on divs
@@ -81,6 +78,11 @@ With my choices of white, grey, and pale yellow chosen, I have decided to dedica
 
 Text will remain generic black unless specified elsewhere.
 
+As an additional colour, a pale dark blue will also be used as both a high contrast background as well as a darker colour to counteract the overwhelming selection of light/bright colours I have picked. It will be the background of every page and header.
+
+### Typography
+Majority of the text will use the web-standard Sans-Serif text font. Important titles will the Ubuntu font. Ubuntu is chosen due to it being similair in visual style to San's serif, while still having some extra flair. Large title will be set at 32px. Standard font will be set to standard font size.
+
 #### Wireframes And Logic
 
 #### Wireframe
@@ -91,13 +93,21 @@ Text will remain generic black unless specified elsewhere.
 
 Down below is the planned database columns and their data storage types.
 
-|Data column|Data type
+Note:
+|Data name|Data type
 |:---|:---|
 |id|Int
 |title|Str
 |description|Str
 |note_content|Txt
 |date_updated|Date
+|tag_id|Int (foreign)
+
+Tag:
+|Data name|Data type
+|:---|:---|
+|id|Int
+|name|Str
 
 'id' Will be the primary key and will increment with every new note created/enters the entry.
 <br>
@@ -176,59 +186,83 @@ I then add, commit, and push this all to GitHub.
 
 #### CRUD
 
-#### Create
+- Create
 
-#### Read
+- Create a note
 
-#### Update
+    create a note screenshot
 
-#### Delete
+    create note code (html, python)
+
+    Note content
+
+    Note content code (html, python)
+
+- Read
+
+    Note displayed
+
+    Note code (html, python)
+
+- Update
+
+    Note edit
+
+    Edit note code(html, python)
+
+- Delete
+
+    Note delete
+
+    Note delete code
 
 By comparing my notes of listed features, both 'minimum viable product goals' and 'additional goals', from the start of the README, I can test if I have achieved them.
 
 #### Current Features
 
-* Home page list all notes with ordering by last opened/edited
+#### Website General
 
-The home page lists all notes created by the user, and lists them by the date in which they were opened. Each note has three buttons that can edit, delete, and open notes to be read. The bold yellow background of the notes, buttons, and search bar against the white backbground of the page makes them stand out brightly, and by making them all interactive as well, it creates a consistant message to user just entering the website: yellow usually contains something interactive. The note buttons and nav buttons all react to user input, and when hovered over their styling changes.
+- Simple navigation
 
-The page itself is interactive, shifting the layout and preportions for different screen sizes. The number of notes displayed on the page in a row changes from 3 on large screens, 2 on medium screens, and 1 on small screens.
+- Size adapation
 
-![Home page with test files laid out correctly on computer](readme_folder/features/features-home-layout.png)
+- Infinite scroll while keeping footer easy to access
 
-![Home page with test files laid out correctly on mobile](readme_folder/features/features-home-layout-mobile.png)
+#### Home
 
-* A search bar at the top of the homepage to search through existing Notes
+- Notes displayed
 
-The home page has a search bar to allow the user to quickly locate desired notes. The search bar updates on every user input, and hides notes that do not match the user's input.
+- Access to note
 
-![Search bar on the home page](readme_folder/features/features-search-bar.png)
+- Edit note
 
-* The New Note link successfully creates a new note that will store content into the database, then appears on the homepage.
+- Delete note
 
-Clicking on the nav button New Note brings the user to a new page where then can create data to be stored into the database. Upon creation, the home page will automatically update with the new note.
+#### New Note
 
-![New note with title and description of Test 6](readme_folder/features/features-new-note-page.png)
+- Create a new note title
 
-![Test 6 note upon creation appears in the home page](readme_folder/features/features-new-note-updated.png)
+- Create a new note description
 
-* Edit page button will allow the user to edit the note
+- Create a new tag
 
-The edit button contained on every note will open up a page very similar to the New Note page. This time the input fields will be filled with the user's previous saved input to allow for easy updating/editing of the notes description and title before letting the user save the changes to the database.
+- Cancel button
 
-![Edit note page](readme_folder/features/features-edit-note.png)
+#### Edit Note
 
-* Notes when clicked on will open a page containing text saved to the document id in the database.
+- Edit an existing note's title
 
-Upon clicking the open button on a note, it will load a page that will display the 'content' of the note. This is a rich text area handled by Quill's Api. Here, the user can create, edit, delete, read, and save content to the database.
+- Edit an existing note's description
 
-![Note main content page](readme_folder/features/features-note-content.png)
+- Create new/edit a tag
 
-* Inside the Note the user has the ability to add basic text effects to the documents, such as bold, italic and underlined
+- Cancel button
 
-Thanks to the rich text area provided and handled by Quill, the user has the ability to add titles, bold text, italic text, and underlined text to the text area. All of this is saved to the database in a Text format for quick and easy unpacking later.
+#### Note main
 
-![Note main content with styling](readme_folder/features/features-note-content-options.png)
+- Edit note content with rich text editor
+
+- Multipe styling options
 
 #### Features To Be Added
 
