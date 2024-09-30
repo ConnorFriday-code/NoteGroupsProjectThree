@@ -124,8 +124,9 @@ header{
 /*------------------------------------------------------------ Home*/
 
 #search-input{
-    width: 100%;
     width: 80%;
+    height: 36px;
+    font-size: 18px;
     margin: 20px auto;
     display: block;
     padding: 5px;
@@ -144,18 +145,21 @@ header{
 
 .card-content{
     padding: 5px;
-    height: 320px;
+    height: 360px;
 }
 
 .card-title{
     border-bottom: #dadada 1px solid;
     border-radius: 3px;
     clear: left;
+    margin: 0;
+    padding: 10px 0;
 }
 
 .card-description{
     border-bottom: #dadada 1px solid;
     border-radius: 3px;
+    padding: 10px 0;
 }
 
 .card-tag{
@@ -169,6 +173,7 @@ header{
 .top-card-buttons{
     width: 50%;
     float: left;
+    padding-top: 10px;
 }
 
 .open-button, .edit-button, .delete-button{
@@ -308,8 +313,6 @@ header{
 #new-note-block input,
 #new-note-block textarea{
     min-height: 40px;
-    border: #dadada 1px solid;
-    border-radius: 5px;
 }
 
 #description{
@@ -320,6 +323,11 @@ header{
 #new-note-block #title-div,
 #edit-note-block #title-div{
     padding-top: 20px;
+}
+
+.input-border{
+    border: #474735 2px solid;
+    border-radius: 6px;
 }
 
 .button-container{

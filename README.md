@@ -378,7 +378,7 @@ Using the user goals I listed at the start of the README, I can use BDD testing 
 
 The navigation bar and note buttons are easy to navigate with text clearly stating what they are. Text and colours are bold, interactive, and clearly visible, making them have strong readability.
 
-![Home page with buttons clearly visible](readme_folder/features/features-home-layout.png)
+![Home page with buttons clearly visible](readme_folder/testing/testing-new-note-large.png)
 
 - To be able to create a new note in three clicks or less
 
@@ -386,7 +386,7 @@ From anywhere on the website, the user can select the nav link to create a new n
 
 ![Nav bar on large screens](readme_folder/testing/testing-new-note-large.png)
 
-![Nav bar on small screens](readme_folder/testing/testing-new-note-small.png)
+![New note page loaded](readme_folder/testing/new-note-in-two-clicks.png)
 
 - To be able to create a note and save it to the database
 
