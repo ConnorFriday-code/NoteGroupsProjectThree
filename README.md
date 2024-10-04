@@ -119,6 +119,10 @@ Tag:
 <br>
 'date_updated' Will contain the date whenever the file is updated for sorting on the homepage.
 
+Seeing how tags are how notes are 'grouped', the final database relationship set up will be a 'many-to-one' as displayed below.
+
+![Database plan](readme_folder/creating_database/database-plan.png)
+
 ## Final Features/Product
 
 ### Deployment
@@ -216,9 +220,9 @@ I then add, commit, and push this all to GitHub.
 
     Note delete code
 
-By comparing my notes of listed features, both 'minimum viable product goals' and 'additional goals', from the start of the README, I can test if I have achieved them.
-
 #### Current Features
+
+By comparing my notes of listed features, both 'minimum viable product goals' and 'additional goals', from the start of the README, I can test if I have achieved them.
 
 #### Website General
 
@@ -273,6 +277,10 @@ Due to time restrictions, these are features I listed at the start of the README
 * CSS functions in the notepage, for example, highlighting and text colour
 
 * Add a way for the user to add multiple notes/text documents to a Note (to make a 'Note Group')
+
+* Add a way to mass edit tags 
+
+* Add a way to delete tags without affecting notes
 
 ### Error Solving
 
@@ -390,29 +398,27 @@ From anywhere on the website, the user can select the nav link to create a new n
 
 - To be able to create a note and save it to the database
 
-Creating a new note successfully gets saved to the database to be brought up and used again later.
+Creating a new note successfully gets saved to the database to be opened, edited, deleted up and read later.
 
-![Creating new note](readme_folder/features/features-new-note-page.png)
+![Creating note](readme_folder/testing/new-note-1.png) 
 
-![New note created and saved to database](readme_folder/features/features-new-note-page.png)
+![Note added to hompage](readme_folder/testing/new-note-2.png)
 
 #### Returning User
 
 - To be able to load already created notes
 
+![Note from earlier but opened!](readme_folder/testing/open-note.png)
+
 Created notes can be opened on the homepage.
-
-![Existing note on homepage](readme_folder/features/features-new-note-updated.png)
-
-![Note opened](readme_folder/features/features-note-content.png)
 
 - To be able to edit old notes and have those changes replace the old document
 
 On the home page there is a button on every note that allows the editing of the title and description of the note. The main content of the note can also be opened and changed in the note rich text editor.
 
-![Edit field for title and description](readme_folder/features/features-edit-note.png)
+![Note open and ready for edit](readme_folder/testing/open-note.png)
 
-![Edit field of note content](readme_folder/features/features-note-content.png)
+![Edit note page](readme_folder/testing/edit-note.png)
 
 - To be able to delete a note in four clicks while still having protective measures
 
@@ -430,7 +436,7 @@ Titles are bold and easy to read. A functioning search bar also exists to help s
 
 ![Note titles are bold and have good contrast to the background](testing-note-title.png)
 
-![Search bar](readme_folder/features/features-search-bar.png)
+![Search bar for quick navigation](readme_folder/testing/searchbar.png)
 
 - For notes to load quickly even at larger sizes
 
