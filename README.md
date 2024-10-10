@@ -184,11 +184,38 @@ I then add, commit, and push this all to GitHub.
 
 #### Heroku And The Database
 
-# DO THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+First I logged into heroku and created a new app called note-groups.
+
+![New options](readme_folder/creating_database/heroku-1.png) 
+
+![Note group app created](readme_folder/creating_database/heroku-2.png)
+
+After this I went to the settings tab and began to adding my config vars.
+
+![List on my config vars](readme_folder/creating_database/heroku-3.png)
+
+Once all the details are filled out, I moved onto the deployment phase. The first step of this is to connect Heroku to my GitHub account, find my repo, then connect to it.
+
+![GitHub account connected to Heroku](readme_folder/creating_database/heroku-4.png)
+
+I decided to include automatic deploys from main due to it saving me the effort to do so later if I need to make further changes.
+
+![Automatic deploy activated](readme_folder/creating_database/heroku-5.png)
+
+After this I ran the console and added my tables to the database. This is done with the command:
+
+![Console](readme_folder/creating_database/heroku-6.png)
+
+    from notegroups import db
+    db.create_all()
+
+After that, the website is ready for use.
 
 ### Features
 
 #### CRUD
+
+# Do this!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 - Create
 
