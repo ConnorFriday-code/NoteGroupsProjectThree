@@ -49,16 +49,25 @@ I decided to choose yellow due to three reasons:
 2. The same yellow can be used as for the high-lighter if I can add the additional goal of css styling being saved to the database, create a constant colour pallete across the webpage
 3. It matches the colour of standard paper notes
 
-I decided to choose white due to two reasons:
+While I now have my theme/main colour, I need more to fill the other roles for my website. After some planning, I have decided to pcik the additional colours of: white, grey, blue, and red. I have chosen these colours for the reasons listed below:
+
+I decided to choose white due for two reasons:
 1. The colour white has high contrast range, especially with black which is standard
 2. The brightness/high value keeps the website feeling light and enegetic
 
-I decided to choose light grey due to two reasons:
+I decided to choose light grey due for three reasons:
 1. It works as a good border/accent colour to both yellow and white
 2. It matches the colour of the lines usually found in notes and note pads
 3. Not an aggressive colour, it will not tear the user's attention away from the content of the website by being distracting
 
-With my main colour choices of white, grey, and pale yellow chosen, I have decided to dedicate these colours to:
+I decided to choose blue for for two reasons:
+1. It's dark tones are a high contrast compared to white and and yellow
+2. It's a good counter balance to all the high colour values, making the website softer to look at
+
+I decided to choose red for a single reason:
+1. It often warns of danger and as such can be used to warn the user about action
+
+With my main colour choices of white, grey, blue, red, and pale yellow chosen, I have decided to dedicate these colours to:
 
 ##### White
 - The background of the notes
@@ -71,14 +80,19 @@ With my main colour choices of white, grey, and pale yellow chosen, I have decid
 - The background of buttons on click/mousedown
 - Border of notes on the homepage
 
+#### Blue
+- Background of the website
+
+#### Red
+- Cancel buttons
+- Delete buttons
+
 ##### Yellow
 - The background of flash messages
 - The background of the footer
 - The background of buttons in navigation
 
-Text will remain generic black unless specified elsewhere.
-
-As an additional colour, a pale dark blue will also be used as both a high contrast background as well as a darker colour to counteract the overwhelming selection of light/bright colours I have picked. It will be the background of every page and header.
+Text will remain standard black unless specified elsewhere.
 
 ### Typography
 Majority of the text will use the web-standard Sans-Serif text font. Important titles will the Ubuntu font. Ubuntu is chosen due to it being similair in visual style to San's serif, while still having some extra flair. Large title will be set at 32px. Standard font will be set to standard font size.
