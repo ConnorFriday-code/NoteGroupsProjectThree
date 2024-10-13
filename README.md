@@ -229,37 +229,49 @@ After that, the website is ready for use.
 
 #### CRUD
 
-# Do this!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 - Create
 
-- Create a note
+Creating a new note which is a new entry of data into the database
 
-    create a note screenshot
+![Creating a new note form](readme_folder/features/crud/crud-create-1.png)
 
-    create note code (html, python)
+![New note html](readme_folder/features/crud/crud-create-2.png)
 
-    Note content
-
-    Note content code (html, python)
+![New note python/routes](readme_folder/features/crud/crud-create-3.png)
 
 - Read
 
-    Note displayed
+![Note displayed on home page](readme_folder/features/crud/crud-read-1.png)
 
-    Note code (html, python)
+![Home page html for note display](readme_folder/features/crud/crud-read-2.png)
+
+![Python route for note display and searchbar](readme_folder/features/crud/crud-read-3.png)
+
+![Note content displayed](readme_folder/features/crud/crud-read-4.png)
+
+![Note content html](readme_folder/features/crud/crud-read-5.png)
+
+![Note content python](readme_folder/features/crud/crud-read-6.png)
 
 - Update
 
-    Note edit
+![Edit note page](readme_folder/features/crud/crud-edit-1.png)
 
-    Edit note code(html, python)
+![Edit note html](readme_folder/features/crud/crud-edit-2.png)
+
+![Edit note python code](readme_folder/features/crud/crud-edit-3.png)
 
 - Delete
 
-    Note delete
+![Delete note part 1](readme_folder/features/crud/crud-delete-1.png)
 
-    Note delete code
+![Delete note part 2](readme_folder/features/crud/crud-delete-2.png)
+
+![Delete note html](readme_folder/features/crud/crud-delete-3.png)
+
+![Delete note python code](readme_folder/features/crud/crud-delete-4.png)
+
+![Delete note js](readme_folder/features/crud/crud-delete-5.png)
 
 #### Current Features
 
