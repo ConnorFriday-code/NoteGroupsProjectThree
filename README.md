@@ -280,12 +280,25 @@ By comparing my notes of listed features, both 'minimum viable product goals' an
 #### Website General
 
 - Simple navigation
+    Navigation is simple with names being large and obvious
+
+    ![Navigation bar](readme_folder/features/current-features/features-simple-nav.png)
 
 - Size adapation
+    Page adjusts to different screen sizes.
+
+    ![Home page on pc](readme_folder/features/current-features/features-size-adaption.png)
+
+    ![Home page on mobile](readme_folder/features/current-features/features-size-adaption-2.png)
 
 - Infinite scroll while keeping footer easy to access
+    Footer is an absolute div to remain at the bottom of the screen for all sizes. Then the page height increases with the number of notes.
+
+    ![Infinite scrolling](readme_folder/features/current-features/features-inf-scrolling.png)
 
 #### Home
+
+# DO THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 - Notes displayed
 
@@ -334,6 +347,8 @@ Due to time restrictions, these are features I listed at the start of the README
 * Add a way to mass edit tags 
 
 * Add a way to delete tags without affecting notes
+
+* Pages system for home page, so that only a limited number of notes can be created and viewed at once to reduce page loading times when many notes exist
 
 ### Error Solving
 
@@ -495,13 +510,13 @@ Titles are bold and easy to read. A functioning search bar also exists to help s
 
 Simple text and styling causes notes to load at a rapid pace, even as their size begins to grow large.
 
-# Page load times here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+![Fast page load times](readme_folder/features/current-features/note-load-times.png)
 
 - For the homepage to load notes at an acceptable speed
 
 Due to notes not having images, limted styling, and limited text length, the load they put on load times is minimal.
 
-# Page load times here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+![alt text](readme_folder/features/current-features/home-load-times.png)
 
 ### Validators
 
