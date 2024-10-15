@@ -298,13 +298,13 @@ By comparing my notes of listed features, both 'minimum viable product goals' an
 
 #### Home
 
-# DO THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+![Home page](readme_folder/features/current-features/features-home-page.png)
 
-- Notes displayed
+- Notes displayed in a clear and easy to read way
 
-- Access to note
+- Access to notes that lets the user add, edit, or delete the main content of the page
 
-- Edit note
+- Edit note button that lets the user edit the title, description, and tag section of a note
 
 - Delete note
 
