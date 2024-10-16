@@ -229,7 +229,7 @@ After that, the website is ready for use.
 
 #### CRUD
 
-- Create
+#### - Create
 
 Creating a new note which is a new entry of data into the database
 
@@ -239,7 +239,7 @@ Creating a new note which is a new entry of data into the database
 
 ![New note python/routes](readme_folder/features/crud/crud-create-3.png)
 
-- Read
+##### - Read
 
 ![Note displayed on home page](readme_folder/features/crud/crud-read-1.png)
 
@@ -253,7 +253,7 @@ Creating a new note which is a new entry of data into the database
 
 ![Note content python](readme_folder/features/crud/crud-read-6.png)
 
-- Update
+##### - Update
 
 ![Edit note page](readme_folder/features/crud/crud-edit-1.png)
 
@@ -261,7 +261,7 @@ Creating a new note which is a new entry of data into the database
 
 ![Edit note python code](readme_folder/features/crud/crud-edit-3.png)
 
-- Delete
+##### - Delete
 
 ![Delete note part 1](readme_folder/features/crud/crud-delete-1.png)
 
@@ -300,15 +300,21 @@ By comparing my notes of listed features, both 'minimum viable product goals' an
 
 ![Home page](readme_folder/features/current-features/features-home-page.png)
 
-- Notes displayed in a clear and easy to read way
+- Notes are displayed in a clear and easy to read way
 
-- Access to notes that lets the user add, edit, or delete the main content of the page
+- Notes contain tags that can be used in grouping/filtering via search bar
+
+- Search bar to locate specific notes
+
+- Access to notes that lets the user add, edit, or delete the main content of the note
 
 - Edit note button that lets the user edit the title, description, and tag section of a note
 
-- Delete note
+- Delete note button that allows the user to delete the entire note, with a 1-step failsafe
 
 #### New Note
+
+![New note page](readme_folder/features/current-features/features-new-note-page.png)
 
 - Create a new note title
 
@@ -316,9 +322,11 @@ By comparing my notes of listed features, both 'minimum viable product goals' an
 
 - Create a new tag
 
-- Cancel button
+- Cancel button if the user doesn't want to create a new note
 
 #### Edit Note
+
+![Edit note page](readme_folder/features/current-features/features-edit-note-page.png)
 
 - Edit an existing note's title
 
@@ -326,13 +334,19 @@ By comparing my notes of listed features, both 'minimum viable product goals' an
 
 - Create new/edit a tag
 
-- Cancel button
+- Cancel button if the user doesn't want to update the note
 
 #### Note main
+
+![Note content page](readme_folder/features/current-features/features-note-content-page.png)
 
 - Edit note content with rich text editor
 
 - Multipe styling options
+
+- Notes can be saved
+
+- Note area is obvious and easy to read
 
 #### Features To Be Added
 
