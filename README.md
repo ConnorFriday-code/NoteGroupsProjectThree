@@ -536,21 +536,31 @@ Due to notes not having images, limted styling, and limited text length, the loa
 
 #### Home
 
-#Do THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 - W3C
     https://validator.w3.org/nu/?doc=https%3A%2F%2Fnote-groups-ce87ce7d60cf.herokuapp.com%2F
 - Jigsaw
     https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnote-groups-ce87ce7d60cf.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
--jshint
+- jshint
     ![Home jshint validation](readme_folder/testing/validation-home-js.png)
     ![Home console no errors](readme_folder/testing/validation-home-console.png)
 
 #### New Note
 
+- W3C
+- Jigsaw
+- jshint
+
 #### Edit Note
 
+- W3C
+- Jigsaw
+- jshint
+
 #### Note
+
+- W3C
+- Jigsaw
+- jshint
 
 #### Python
 
