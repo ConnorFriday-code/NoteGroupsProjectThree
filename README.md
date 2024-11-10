@@ -1,5 +1,8 @@
 # Note Groups!
 
+Link to live website:
+https://note-groups-ce87ce7d60cf.herokuapp.com/
+
 ## UX
 
 ### Project Goal
@@ -222,6 +225,12 @@ After this, I ran the console and added my tables to the database. This is done 
 
     from notegroups import db
     db.create_all()
+
+#### Debug
+
+Before releasing the project live, I had to make sure debug is fully turned off.
+
+![Debug set to false](readme_folder/creating_database/debug-false.png)
 
 After that, the website is ready for use.
 
@@ -514,7 +523,7 @@ When it comes to deleting a note, it can be achieved in two clicks, bringing it 
 
 Titles are bold and easy to read. A functioning search bar also exists to help siff through notes.
 
-![Note titles are bold and have good contrast to the background](testing-note-title.png)
+![Note titles are bold and have good contrast to the background](readme_folder/testing/testing-note-title.png)
 
 ![Search bar for quick navigation](readme_folder/testing/searchbar.png)
 
@@ -535,64 +544,92 @@ Due to notes not having images, limited styling, and limited text length, the lo
 #### Home
 
 - W3C
+
     https://validator.w3.org/nu/?doc=https%3A%2F%2Fnote-groups-ce87ce7d60cf.herokuapp.com%2F
+
 - Jigsaw
+
     https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnote-groups-ce87ce7d60cf.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
+
 - jshint/console
 
+
     ![jshint validation](readme_folder/testing/validation-home-js.png)
+
     ![Home console with no errors](readme_folder/testing/validation-home-console.png)
 
 - Pagespeed
+
     ![Home pagespeed](readme_folder/testing/pagespeed-home.png)
 
 #### New Note
 
 - W3C
+
     https://validator.w3.org/nu/?doc=https%3A%2F%2Fnote-groups-ce87ce7d60cf.herokuapp.com%2Fnew_note
+
 - Jigsaw
+
     https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnote-groups-ce87ce7d60cf.herokuapp.com%2Fnew_note&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
+
 - jshint/console
 
     ![jshint validation](readme_folder/testing/validation-home-js.png)
+
     ![New note console with expected quill error](readme_folder/testing/validation-new-note-console.png)
 
 - Pagespeed
+
     ![New note pagespeed](readme_folder/testing/pagespeed-new-note.png)
 
 #### Edit Note
 
 - W3C
+
     https://validator.w3.org/nu/?doc=https%3A%2F%2Fnote-groups-ce87ce7d60cf.herokuapp.com%2Fedit_note%2F2
+
 - Jigsaw
+
     https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnote-groups-ce87ce7d60cf.herokuapp.com%2Fedit_note%2F2&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
+
 - jshint/console
 
     ![jshint validation](readme_folder/testing/validation-home-js.png)
+
     ![Edit note console with no errors](readme_folder/testing/validation-edit-note-console.png)
 
 - Pagespeed
-    ![Edit note pagespeed](pagespeed-edit-note.png)
+
+    ![Edit note pagespeed](readme_folder/testing/pagespeed-edit-note.png)
 
 #### Note
 
 - W3C
+
     https://validator.w3.org/nu/?doc=https%3A%2F%2Fnote-groups-ce87ce7d60cf.herokuapp.com%2Fnote%2F2
+
 - Jigsaw
+
     https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnote-groups-ce87ce7d60cf.herokuapp.com%2Fnote%2F2&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
+
 - jshint/console
 
     ![jshint validation](readme_folder/testing/validation-home-js.png)
+
     ![Note content](readme_folder/testing/validation-note-content-console.png)
 
 - Pagespeed
+
     ![Note content pagespeed](readme_folder/testing/pagespeed-note-content.png)
 
 #### Python
 
 - Models
+
     ![Models passing Linter](readme_folder/testing/validation-models-python.png)
+
 - Routes
+
     ![Routes passing Linter](readme_folder/testing/validation-routes-python.png)
 
 ## Technology Used

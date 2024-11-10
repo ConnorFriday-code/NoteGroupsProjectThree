@@ -204,12 +204,12 @@ header{
 
 .delete-button{
     background-color: #e44444;
+    color: #fff;
     cursor: pointer;
 }
 
 .delete-button:hover{
     background-color: #d11717;
-    color: #fff;
 }
 
 #delete-check-outer{
@@ -261,17 +261,19 @@ header{
 #confirm-delete{
     background-color: #e44444;
     color: #000;
+    color: #fff;
+    font-size: 16px;
 }
 
 #confirm-delete:hover{
     background-color: #d11717;
-    color: #fff;
 }
 
 
 #cancel-delete{
     background-color: #fff;
     cursor: pointer;
+    font-size: 16px;
 }
 
 #cancel-delete:hover{
@@ -360,12 +362,11 @@ header{
 
 #cancel-button{
     background-color: #ff2c2c;
-    color: #000;
+    color: #fff;
 }
 
 #cancel-button:hover{
     background-color: #d11717;
-    color: #fff;
 }
 
 /*------------------------------------------------------------ Note*/
