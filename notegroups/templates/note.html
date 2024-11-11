@@ -41,15 +41,6 @@
         },
     });
 
-    quill.on('text-change', function() {
-        const headerElements = quill.root.querySelectorAll('h1, h2, h3');
-        headerElements.forEach(header => {
-            if (!header.classList.contains('title-font')) {
-                header.classList.add('title-font');
-            }
-        });
-    });
-
     // Set the editor content to the note content from the database
     quill.root.innerHTML = "{{ note.note_content|safe }}";
 
