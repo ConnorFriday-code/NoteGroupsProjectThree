@@ -13,7 +13,7 @@
     <!-- Note background -->
     <div id="note-area" class="bg-white">
         <!-- Note editor area -->
-        <div id="editor" class="title-font">
+        <div id="editor">
             {{ note.note_content|safe }}
         </div>
     </div>
@@ -39,6 +39,15 @@
                 ['bold', 'italic', 'underline'],
             ],
         },
+    });
+
+    quill.on('text-change', function() {
+        const headerElements = quill.root.querySelectorAll('h1, h2, h3');
+        headerElements.forEach(header => {
+            if (!header.classList.contains('title-font')) {
+                header.classList.add('title-font');
+            }
+        });
     });
 
     // Set the editor content to the note content from the database
